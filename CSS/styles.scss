@@ -24,23 +24,36 @@
 	--primary-color: #9356DC;
 	--secondary-color: #FF79DA;
 	--tertiary-color: #99E2D0;
+    --grey-button:rgba(246, 246, 246, 1);
+    --green-text:#008766;
     a:visited {color:black;}
     a:link{ text-decoration:none;}
 
 }
+@mixin pink-button{
+    
+    min-height: 60px;
+    border-radius: 30px 30px 30px 30px;
+    background: linear-gradient(180deg, #FF79DA , #9356DC);
+    border:0;
+    color: white;
+    padding: 0 25px 0 25px;
+    margin-bottom: 35px;
+    font-size: large;
+    &:hover{
+        opacity: 0.7;
+    }
+}
 @mixin h1-mob {
     text-align: center;
     font-size: 2rem;
-  
-  }
-  @mixin h1-tab {
+}
+@mixin h1-tab {
     font-family: "Shrikhand", serif;
     font-size: 2rem;
     display: inline-block;
     margin:0;
-
-  }
-
+}
 body {
 	display: flex;
 	flex-direction: column;
@@ -55,6 +68,7 @@ justify-content: center;
         display: flex;
         flex-direction:column;
         align-items: center;
+        background-color:var(--grey-button) ;
         h1{
             @include h1-mob;
             margin-right: 15%;
@@ -69,17 +83,29 @@ justify-content: center;
             font-size:x-large;
             text-align: center;
             margin-bottom: 30px;
-        
         }
         .button{
-            min-width: 300px;
-            min-height: 60px;
-            border-radius: 30px 30px 30px 30px;
-            background-color: var(--secondary-color);
-            margin-bottom: 35px;
+            @include pink-button;
+        }   
+    }
+        &__fonction{
+            background-color: white;
+            & h2 {
+                margin-left:20px
+            }
+            &--ul{
+            display:flex;
+            flex-direction:column;
+            justify-content:space-between;
+            list-style-type: none;
+            margin:0px 25px 0 35px;
+            padding-left: 0;
+            gap:20px;
+            
+        }
         }
     }
-}
+
 
 /****** General pad ***********/
 

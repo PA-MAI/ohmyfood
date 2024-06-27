@@ -9,10 +9,11 @@
   }*/
 @import "partial/loader.css";
 @import "partial/header.css";
+@import "partial/cards.css";
  
-* {
+* /*{
 	font-family: 'Roboto', sans-serif;
-}
+}*/
 ::before,
 ::after {
     box-sizing: border-box;
@@ -28,6 +29,8 @@
     --green-text:#008766;
     a:visited {color:black;}
     a:link{ text-decoration:none;}
+    font-family: 'Roboto', sans-serif;
+    --shrikhand-font: "Shrikhand", serif;
 
 }
 @mixin pink-button{
@@ -48,12 +51,12 @@
     text-align: center;
     font-size: 2rem;
 }
-@mixin h1-tab {
+/*@mixin h1-tab {
     font-family: "Shrikhand", serif;
     font-size: 2rem;
     display: inline-block;
     margin:0;
-}
+}*/
 body {
 	display: flex;
 	flex-direction: column;
@@ -64,6 +67,8 @@ body {
 display: flex;
 flex-direction:column;
 justify-content: center;
+margin-bottom: 35px;
+
     &__title {
         display: flex;
         flex-direction:column;
@@ -90,21 +95,66 @@ justify-content: center;
     }
         &__fonction{
             background-color: white;
+            
             & h2 {
                 margin-left:20px
             }
             &--ul{
             display:flex;
             flex-direction:column;
-            justify-content:space-between;
+            justify-content:space-evenly;
+            align-items: center;
+            align-content: center;
             list-style-type: none;
             margin:0px 25px 0 35px;
             padding-left: 0;
-            gap:20px;
+            gap:25px;
             
+            & li{
+                height: 72px;
+                width: 100%;
+                background-color:var(--grey-button) ;
+                text-align: left;
+                border-radius: 20px 20px 20px 20px;
+                align-content: center;
+                box-shadow:   0px 5px 5px 2px rgba(0, 0, 0, 0.12);
+                font-size:larger;
+            & i{
+                padding-right:5%;
+                color :grey;
+padding-left:15%;
+            }    
+                
+            }
         }
         }
     }
+    .footer{
+    background-color:#353535;
+    color: white;
+    font-family: var(--shrikhand-font);
+    
+    &__logo{ 
+        background-color: white;
+        -webkit-mask: url(./assets/images/logo/ohmyfood.svg);
+        mask: url(./assets/images/logo/ohmyfood.svg);
+        
+    }
+    & ul li{
+        list-style-type: none;
+        
+    }
+    & ul li a{
+        font-family: 'Roboto', sans-serif;
+
+        color: white;
+        :visited{
+            color:white;
+        }
+    }    
+
+    }
+
 
 
 /****** General pad ***********/

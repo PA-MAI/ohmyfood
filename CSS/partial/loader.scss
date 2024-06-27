@@ -1,4 +1,4 @@
-$anim-dur: 6s;
+$anim-dur: 2s;
 
         body {
             display: flex;
@@ -17,7 +17,7 @@ $anim-dur: 6s;
             top: 0;
             left: 0;
             z-index: 9999; /* Ensure it's above everything */
-            animation: fadeOut 2s forwards 8s; /* Fade out after 10s */
+            animation: fadeOut 2s forwards 2s; /* Fade out after 5s */
         }
 
         .button__loader {
@@ -108,7 +108,7 @@ $anim-dur: 6s;
             to {
                 opacity: 0;
                 visibility: hidden;
-                display: none; /* Ensure the loader doesn't take up space */
+                display: none; 
             }
         }
 
@@ -116,7 +116,7 @@ $anim-dur: 6s;
         .content {
             opacity: 0;
             visibility: hidden;
-            animation: fadeIn 2s forwards 10s; /* Le contenu apparait après 10s */
+            animation: fadeIn 2s forwards 2s; /* Le contenu apparait après 2s */
         }
 
         @keyframes fadeIn {

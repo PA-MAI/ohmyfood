@@ -24,12 +24,6 @@
      font-family: "Roboto", sans-serif;
      --shrikhand-font: "Shrikhand", serif;
 }
-:root a:visited {
-     color: black;
-}
-:root a:link {
-     text-decoration: none;
-}
 
 /*@mixin h1-tab {
     font-family: "Shrikhand", serif;
@@ -42,58 +36,61 @@ body {
      flex-direction: column;
      max-width: 767.98px;
      margin: 0;
+     width: 100%;
+     align-content: center;
 }
 
-.hero {
+.explore {
      display: flex;
      flex-direction: column;
      justify-content: center;
      margin-bottom: 35px;
 }
-.hero__title {
+.explore__title {
      display: flex;
      flex-direction: column;
      align-items: center;
      background-color: var(--grey-button);
      box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.22) inset;
 }
-.hero__title h1 {
+.explore__title h1 {
      text-align: center;
-     font-size: 2rem;
+     font-size: 1.5rem;
      margin-right: 15%;
      margin-left: 15%;
      margin-top: 39px;
 }
-.hero__title h2 {
-     margin-right: 10%;
-     margin-left: 10%;
+.explore__title h2 {
+     margin-right: 7%;
+     margin-left: 7%;
      margin-top: 0;
      font-weight: 300;
-     font-size: x-large;
+     font-size: 18px;
      text-align: center;
      margin-bottom: 30px;
 }
-.hero__title .button {
+.explore__title .button {
      min-height: 60px;
      border-radius: 30px 30px 30px 30px;
      background: linear-gradient(180deg, #FF79DA, #9356DC);
      border: 0;
      color: white;
      padding: 0 25px 0 25px;
-     margin-bottom: 35px;
+     margin-bottom: 55px;
      font-size: large;
+     font-weight: 500;
      box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.22);
 }
-.hero__title .button:hover {
+.explore__title .button:hover {
      opacity: 0.7;
 }
-.hero__fonction {
+.explore__function {
      background-color: white;
 }
-.hero__fonction h2 {
+.explore__function h2 {
      margin-left: 20px;
 }
-.hero__fonction--ul {
+.explore__function--ul {
      display: flex;
      flex-direction: column;
      justify-content: space-evenly;
@@ -104,7 +101,7 @@ body {
      padding-left: 0;
      gap: 25px;
 }
-.hero__fonction--ul li {
+.explore__function--ul li {
      height: 72px;
      width: 100%;
      background-color: var(--grey-button);
@@ -112,32 +109,58 @@ body {
      border-radius: 20px 20px 20px 20px;
      align-content: center;
      box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.12);
-     font-size: larger;
+     font-size: large;
+     font-weight: 500;
 }
-.hero__fonction--ul li i {
+.explore__function--ul li i {
      padding-right: 5%;
      color: grey;
-     padding-left: 15%;
+     padding-left: 30px;
+}
+.explore__function--ul li .circle {
+     width: 15px;
+     height: 15px;
+     display: inline-block;
+     background-color: #9356DC;
+     border-radius: 20px;
+     color: white;
+     position: inherit;
+     margin-left: -10px;
+     padding-left: 7px;
+     margin-right: 5px;
+     padding-top: 3px;
+     padding-bottom: 3px;
+     font-size: 14px;
+}
+.explore__function--ul li .fa-store {
+     color: #9356DC;
 }
 
 .footer {
      background-color: #353535;
      color: white;
      font-family: var(--shrikhand-font);
+     padding: 22px 25px 22px 25px;
+}
+.footer :visited {
+     color: white;
+}
+.footer :link {
+     color: white;
+     text-decoration: none;
+}
+.footer ul {
+     padding: 0;
 }
 .footer__logo {
-     background-color: white;
-     -webkit-mask: url(./assets/images/logo/ohmyfood.svg);
-     mask: url(./assets/images/logo/ohmyfood.svg);
+     height: 20px;
 }
 .footer ul li {
      list-style-type: none;
+     color: white;
 }
 .footer ul li a {
      font-family: "Roboto", sans-serif;
-     color: white;
-}
-.footer ul li a :visited {
      color: white;
 }
 

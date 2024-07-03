@@ -33,18 +33,23 @@
     	flex-direction:column; 
 		align-content: center;
 		height: 250px;
-		
 		width: 100%;
         background-color: white;
         border-radius: 20px;
         padding: 0px;
-		/*box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 10px 0px;*/
+		box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 10px 0px;
 		&--img{
 			border-radius: 20px 20px 0 0;
             object-fit: cover;
 	        height: 173px;
 	        width: 100%;
+		
         }
+		
+
+
+		
+		
 	}
 		&__cards-title {
 			width: 100%;
@@ -64,31 +69,69 @@
 				grid-column: 2 / 2;
 				grid-row: 1 / 2;
 				text-align:center;
-				margin-top:10px;
-
-
-				
-			}
-			&__cards-heart {
+				margin-top:5px;
+				position: relative;
 				display: inline-block;
+				width: 90px;
+				height: 30px;
 				
-					height: 52px;
-					width: 51px;
-	
-					&:hover{
-						display:none;
-						stroke: linear-gradient(180deg, #ff79da ,#9356d8);
-						fill: linear-gradient(180deg, #ff79da ,#9356d8);
-
-						background: linear-gradient(180deg, #ff79da ,#9356d8);
-						background-clip: border-box;
-						-webkit-background-clip:content-box;
-						-webkit-text-fill-color: transparent;
-						-moz-background-clip:border-box;
-						-moz-text-fill-color: transparent;
+				
+				input[type="checkbox"] {
+					display: none;
+				
+					&:checked ~ .heart-label {
+					  .restaurants__cards-like--unchecked {
+						opacity: 0;
+					  }
+				
+					  .restaurants__cards-like--checked {
+						opacity: 1;
+					  }
 					}
+				  }
+				
+				  .heart-label {
+					display: block;
+					
+					
+					position: relative;
+				
+					img {
+					    width: 30px;
+      					height: 30px;
+      					position: absolute;
+      					margin-top: 30%;
+      					left: 20%;
+						right: 30%;
+      					transform: translate(-50%, -50%);
+      					transition: opacity 0.3s ease;
+						
+					}
+
+					.restaurants__cards-like--unchecked {
+					  opacity: 1;
+					}
+
+					.restaurants__cards-like--checked {
+					  opacity: 0;
+					}
+				  }
 				}
 
-}	
-
-
+			}
+.restaurant__cards--link {
+	height: 170px;
+}.new-badge {
+				position:relative;
+				height: 18px;
+				width:55px;
+				top: -95%; /* Ajustez la position verticale selon vos besoins */
+				right: -70%; /* Ajustez la position horizontale selon vos besoins */
+				background-color: #99E2D0; /* Couleur verte pour l'encart */
+				color: #008766; /* Couleur du texte */
+				padding: 5px 10px; /* Espacement interne */
+				font-size: 14px; /* Taille de la police */
+				font-weight: 500; /* Gras */
+				border-radius: 2px; /* Coins arrondis */
+			}	
+			

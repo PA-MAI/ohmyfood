@@ -13,11 +13,11 @@ $anim-dur: 2s;
             width: 100vw;
             height: 100vh;
             background-color: silver;
-            position: fixed; /* Fixed position to overlay on top */
+            position: fixed; 
             top: 0;
             left: 0;
-            z-index: 9999; /* Ensure it's above everything */
-            animation: fadeOut 2s forwards 2s; /* Fade out after 5s */
+            z-index: 9999; 
+            animation: fadeOut 2s forwards 2s; /* Fade out après  2s */
         }
 
         .button__loader {

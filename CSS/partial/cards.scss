@@ -65,6 +65,7 @@
 				grid-row: 2 / 2;
 				padding-left:20px;
 			}
+			/* pink like */
 			&__cards-like{
 				grid-column: 2 / 2;
 				grid-row: 1 / 2;
@@ -92,8 +93,6 @@
 				
 				  .heart-label {
 					display: block;
-					
-					
 					position: relative;
 				
 					img {
@@ -121,17 +120,18 @@
 			}
 .restaurant__cards--link {
 	height: 170px;
+	/* encarts nouveau */
 }.new-badge {
 				position:relative;
 				height: 18px;
 				width:55px;
-				top: -95%; /* Ajustez la position verticale selon vos besoins */
-				right: -70%; /* Ajustez la position horizontale selon vos besoins */
-				background-color: #99E2D0; /* Couleur verte pour l'encart */
-				color: #008766; /* Couleur du texte */
-				padding: 5px 10px; /* Espacement interne */
-				font-size: 14px; /* Taille de la police */
-				font-weight: 500; /* Gras */
-				border-radius: 2px; /* Coins arrondis */
+				top: -95%; 
+				right: -70%; 
+				background-color: #99E2D0; 
+				color: #008766; 
+				padding: 5px 10px; 
+				font-size: 14px; 
+				font-weight: 500; 
+				border-radius: 2px; 
 			}	
 			

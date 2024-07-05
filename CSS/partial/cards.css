@@ -1,3 +1,33 @@
+mixin like input[type=checkbox] {
+     display: none;
+}
+mixin like input[type=checkbox]:checked ~ .heart-label .restaurants__cards-like--unchecked {
+     opacity: 0;
+}
+mixin like input[type=checkbox]:checked ~ .heart-label .restaurants__cards-like--checked {
+     opacity: 1;
+}
+mixin like .heart-label {
+     display: block;
+     position: relative;
+}
+mixin like .heart-label img {
+     width: 30px;
+     height: 30px;
+     position: absolute;
+     margin-top: 30%;
+     left: 20%;
+     right: 30%;
+     transform: translate(-50%, -50%);
+     transition: opacity 0.3s ease;
+}
+mixin like .heart-label .restaurants__cards-like--unchecked {
+     opacity: 1;
+}
+mixin like .heart-label .restaurants__cards-like--checked {
+     opacity: 0;
+}
+
 .restaurants {
      display: flex;
      flex-direction: column;

@@ -22,7 +22,7 @@
      --grey-button:rgba(246, 246, 246, 1);
      --green-text:#008766;
      font-family: "Roboto", sans-serif;
-     --shrikhand-font: "Shrikhand", serif;
+     --shrikhand-font: "Shrikhand", sans-serif;
 }
 
 /*@mixin h1-tab {
@@ -83,6 +83,7 @@ body {
 }
 .explore__title .button:hover {
      opacity: 0.7;
+     box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.42);
 }
 .explore__function {
      background-color: white;
@@ -169,47 +170,38 @@ body {
 }
 
 .hero {
+     background-image: url("../Assets/images/restaurants/jay-wennington-palette.jpg");
      background-clip: padding-box;
+     background-size: cover;
      background-color: white;
-}
-.hero img {
-     height: 130px;
+     height: 230px;
 }
 
 .menu {
      display: flex;
      flex-direction: column;
      justify-content: center;
-     border-radius: 50px 50px 0 0;
+     border-radius: 40px 40px 0 0;
      background-color: var(--grey-button);
      padding: 13px;
      margin-bottom: 0;
+     margin-top: -50px;
 }
 .menu h2 {
-     font-size: 22px;
+     font-size: 18px;
      font-weight: 300;
-}
-.menu h3 {
-     font-size: medium;
-     font-weight: 500;
-     margin-bottom: 0;
-     margin-left: 15px;
-}
-.menu h4 {
-     font-size: medium;
-     font-weight: 300;
-     margin-top: 0;
-     margin-left: 15px;
-}
-.menu h5 {
-     margin-right: 25px;
-     margin-top: 35px;
      margin-bottom: 10px;
-     font-size: 14px;
-     font-weight: 500;
+}
+.menu hr {
+     width: 40px;
+     margin: 10px 0 15px 0;
+     text-align: left;
+     border: 2px solid var(--tertiary-color);
 }
 .menu__name {
      font-family: var(--shrikhand-font);
+     font-size: 28px;
+     font-weight: 400;
 }
 .menu__button {
      min-height: 60px;
@@ -225,29 +217,52 @@ body {
 }
 .menu__button:hover {
      opacity: 0.7;
+     box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.42);
 }
 .menu__entrees, .menu__plats, .menu__desserts {
-     display: flex;
-     flex-direction: column;
+     /*display:flex;
+     flex-direction: column;*/
+     margin-bottom: 20px;
 }
 .menu__entrees--ul, .menu__plats--ul, .menu__desserts--ul {
+     display: flex;
+     flex-direction: column;
      list-style-type: none;
      padding: 0;
+     gap: 15px;
 }
 .menu__entrees--ul li, .menu__plats--ul li, .menu__desserts--ul li {
-     /*display:grid;
-     grid-template-columns: 2fr 1fr;
-     grid-column: 80% 20%;*/
      display: flex;
      flex-direction: row;
      justify-content: space-between;
-     grid-template-rows: 35px 35px;
      gap: 5px;
      background-color: white;
-     width: 100%;
+     width: 96%;
      border-radius: 20px 20px 20px 20px;
      height: 72px;
      box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.09);
+}
+.menu__entrees--ul li h3, .menu__plats--ul li h3, .menu__desserts--ul li h3 {
+     font-size: large;
+     font-weight: 500;
+     margin-bottom: 0;
+     margin-left: 15px;
+}
+.menu__entrees--ul li h4, .menu__plats--ul li h4, .menu__desserts--ul li h4 {
+     display: inline-block;
+     font-size: medium;
+     font-weight: 300;
+     margin: 5px 0 10px 15px;
+     width: 100%;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+}
+.menu__entrees--ul li h5, .menu__plats--ul li h5, .menu__desserts--ul li h5 {
+     margin: 42px 25px 10px 0;
+     font-size: 15px;
+     font-weight: 700;
+     text-wrap: nowrap;
 }
 
 .commande {

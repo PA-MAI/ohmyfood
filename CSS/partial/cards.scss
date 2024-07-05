@@ -1,3 +1,47 @@
+
+mixin like{
+	width: 30px;
+	height: 30px;
+	input[type="checkbox"] {
+		display: none;
+	
+		&:checked ~ .heart-label {
+		  .restaurants__cards-like--unchecked {
+			opacity: 0;
+		  }
+	
+		  .restaurants__cards-like--checked {
+			opacity: 1;
+		  }
+		}
+	  }
+	
+	  .heart-label {
+		display: block;
+		position: relative;
+	
+		img {
+			  width: 30px;
+			  height: 30px;
+			  position: absolute;
+			  margin-top: 30%;
+			  left: 20%;
+			  right: 30%;
+			  transform: translate(-50%, -50%);
+			  transition: opacity 0.3s ease;
+			
+		}
+
+		.restaurants__cards-like--unchecked {
+		  opacity: 1;
+		}
+
+		.restaurants__cards-like--checked {
+		  opacity: 0;
+		}
+	  }
+}
+
 .restaurants{
     display: flex;
     flex-direction:column; 
@@ -13,7 +57,7 @@
         font-size: 22px;
 		margin:0 0 0 25px;
     }
-	&__articles{
+	&__art{
 		display: flex;
     	flex-direction:column; 
 		justify-content: space-between;
@@ -43,13 +87,8 @@
             object-fit: cover;
 	        height: 173px;
 	        width: 100%;
-		
         }
-		
 
-
-		
-		
 	}
 		&__cards-title {
 			width: 100%;
@@ -73,55 +112,17 @@
 				margin-top:5px;
 				position: relative;
 				display: inline-block;
-				width: 90px;
-				height: 30px;
-				
-				
-				input[type="checkbox"] {
-					display: none;
-				
-					&:checked ~ .heart-label {
-					  .restaurants__cards-like--unchecked {
-						opacity: 0;
-					  }
-				
-					  .restaurants__cards-like--checked {
-						opacity: 1;
-					  }
-					}
-				  }
-				
-				  .heart-label {
-					display: block;
-					position: relative;
-				
-					img {
-					    width: 30px;
-      					height: 30px;
-      					position: absolute;
-      					margin-top: 30%;
-      					left: 20%;
-						right: 30%;
-      					transform: translate(-50%, -50%);
-      					transition: opacity 0.3s ease;
-						
-					}
-
-					.restaurants__cards-like--unchecked {
-					  opacity: 1;
-					}
-
-					.restaurants__cards-like--checked {
-					  opacity: 0;
-					}
-				  }
-				}
+				@include like;
 
 			}
+
+}
 .restaurant__cards--link {
 	height: 170px;
-	/* encarts nouveau */
-}.new-badge {
+
+}
+/* encarts "nouveau" */
+.new-badge {
 				position:relative;
 				height: 18px;
 				width:55px;

@@ -21,7 +21,7 @@
      height: 36px;
      margin-bottom: -10px;
 }
-.header__logo nav {
+.header__logo .fa-solid {
      display: none;
      margin: 15px 28% 10px 5%;
 }

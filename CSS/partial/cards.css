@@ -1,33 +1,3 @@
-mixin like input[type=checkbox] {
-     display: none;
-}
-mixin like input[type=checkbox]:checked ~ .heart-label .restaurants__cards-like--unchecked {
-     opacity: 0;
-}
-mixin like input[type=checkbox]:checked ~ .heart-label .restaurants__cards-like--checked {
-     opacity: 1;
-}
-mixin like .heart-label {
-     display: block;
-     position: relative;
-}
-mixin like .heart-label img {
-     width: 30px;
-     height: 30px;
-     position: absolute;
-     margin-top: 30%;
-     left: 20%;
-     right: 30%;
-     transform: translate(-50%, -50%);
-     transition: opacity 0.3s ease;
-}
-mixin like .heart-label .restaurants__cards-like--unchecked {
-     opacity: 1;
-}
-mixin like .heart-label .restaurants__cards-like--checked {
-     opacity: 0;
-}
-
 .restaurants {
      display: flex;
      flex-direction: column;
@@ -47,7 +17,7 @@ mixin like .heart-label .restaurants__cards-like--checked {
      font-size: 22px;
      margin: 0 0 0 25px;
 }
-.restaurants__articles {
+.restaurants__art {
      display: flex;
      flex-direction: column;
      justify-content: space-between;
@@ -98,8 +68,8 @@ mixin like .heart-label .restaurants__cards-like--checked {
      margin-top: 5px;
      position: relative;
      display: inline-block;
-     width: 90px;
-     height: 30px;
+     width: 35px;
+     height: 35px;
 }
 .restaurants__cards-like input[type=checkbox] {
      display: none;
@@ -115,10 +85,10 @@ mixin like .heart-label .restaurants__cards-like--checked {
      position: relative;
 }
 .restaurants__cards-like .heart-label img {
-     width: 30px;
-     height: 30px;
+     width: 35px;
+     height: 35px;
      position: absolute;
-     margin-top: 30%;
+     margin-top: 50%;
      left: 20%;
      right: 30%;
      transform: translate(-50%, -50%);
@@ -133,9 +103,9 @@ mixin like .heart-label .restaurants__cards-like--checked {
 
 .restaurant__cards--link {
      height: 170px;
-     /* encarts nouveau */
 }
 
+/* encarts "nouveau" */
 .new-badge {
      position: relative;
      height: 18px;

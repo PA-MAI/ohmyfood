@@ -127,11 +127,8 @@ body {
      border-radius: 20px;
      color: white;
      position: inherit;
-     margin-left: -10px;
-     padding-left: 7px;
-     margin-right: 5px;
-     padding-top: 3px;
-     padding-bottom: 3px;
+     margin: 3px 5px 0 -10px;
+     padding: 3px 7px 3px 7px;
      font-size: 14px;
 }
 .explore__function--ul li .fa-store {
@@ -167,108 +164,6 @@ body {
 }
 .footer ul li a img {
      padding-right: 10px;
-}
-
-.hero {
-     background-image: url("../Assets/images/restaurants/jay-wennington-palette.jpg");
-     background-clip: padding-box;
-     background-size: cover;
-     background-color: white;
-     height: 230px;
-}
-
-.menu {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     border-radius: 40px 40px 0 0;
-     background-color: var(--grey-button);
-     padding: 13px;
-     margin-bottom: 0;
-     margin-top: -50px;
-}
-.menu h2 {
-     font-size: 18px;
-     font-weight: 300;
-     margin-bottom: 10px;
-}
-.menu hr {
-     width: 40px;
-     margin: 10px 0 15px 0;
-     text-align: left;
-     border: 2px solid var(--tertiary-color);
-}
-.menu__name {
-     font-family: var(--shrikhand-font);
-     font-size: 28px;
-     font-weight: 400;
-}
-.menu__button {
-     min-height: 60px;
-     border-radius: 30px 30px 30px 30px;
-     background: linear-gradient(180deg, #FF79DA, #9356DC);
-     border: 0;
-     color: white;
-     padding: 0 25px 0 25px;
-     margin-bottom: 55px;
-     font-size: large;
-     font-weight: 500;
-     box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.22);
-}
-.menu__button:hover {
-     opacity: 0.7;
-     box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.42);
-}
-.menu__entrees, .menu__plats, .menu__desserts {
-     /*display:flex;
-     flex-direction: column;*/
-     margin-bottom: 20px;
-}
-.menu__entrees--ul, .menu__plats--ul, .menu__desserts--ul {
-     display: flex;
-     flex-direction: column;
-     list-style-type: none;
-     padding: 0;
-     gap: 15px;
-}
-.menu__entrees--ul li, .menu__plats--ul li, .menu__desserts--ul li {
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     gap: 5px;
-     background-color: white;
-     width: 96%;
-     border-radius: 20px 20px 20px 20px;
-     height: 72px;
-     box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.09);
-}
-.menu__entrees--ul li h3, .menu__plats--ul li h3, .menu__desserts--ul li h3 {
-     font-size: large;
-     font-weight: 500;
-     margin-bottom: 0;
-     margin-left: 15px;
-}
-.menu__entrees--ul li h4, .menu__plats--ul li h4, .menu__desserts--ul li h4 {
-     display: inline-block;
-     font-size: medium;
-     font-weight: 300;
-     margin: 5px 0 10px 15px;
-     width: 100%;
-     overflow: hidden;
-     white-space: nowrap;
-     text-overflow: ellipsis;
-}
-.menu__entrees--ul li h5, .menu__plats--ul li h5, .menu__desserts--ul li h5 {
-     margin: 42px 25px 10px 0;
-     font-size: 15px;
-     font-weight: 700;
-     text-wrap: nowrap;
-}
-
-.commande {
-     display: flex;
-     justify-content: center;
-     margin-top: 30px;
 }
 
 /****** General pad ***********/

@@ -79,6 +79,7 @@ body {
     width:100%;
     align-content: center;
 }
+
 .explore {
     display: flex;
     flex-direction:column;
@@ -187,117 +188,7 @@ body {
     }    
 
 }
-/*page de menu*/
-@mixin menu-card{
-    
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-    gap: 5px;
-    background-color:white;
-    width:96%;
-    border-radius: 20px 20px 20px 20px;
-    height:72px;
-    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.09);
 
-}
-.hero{
-    background-image: url("../Assets/images/restaurants/jay-wennington-palette.jpg");
-    background-clip:padding-box;
-    background-size :cover;
-    background-color: white;
-    height: 230px;
-   
-}
-
-
-.menu{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 40px 40px 0 0;
-    background-color:var(--grey-button);
-    padding:13px;
-    margin-bottom:0;
-    margin-top: -50px;
-    &__titre{
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    h2{
-        font-size: 18px;
-        font-weight: 300;
-        margin-bottom: 10px;
-    }
-    hr {
-        width: 40px;
-        margin: 10px 0 15px 0;
-        text-align: left;
-        border: 2px solid var(--tertiary-color);              
-    }  
-    &__name {
-        font-family:var(--shrikhand-font);
-        font-size: 28px;
-        font-weight: 400;
-        
-        @include like;
-    }
-    &__button{
-            @include pink-button;
-
-        }
-    &__entrees, &__plats, &__desserts{
-            /*display:flex;
-            flex-direction: column;*/
-          margin-bottom: 20px;
-            &--ul {
-                display:flex;
-                flex-direction: column;
-                list-style-type: none;
-                padding:0;
-                gap:15px;
-                
-                li{
-                    @include menu-card;
-                    
-                    
-                    .card-title{
-                        font-size: large;
-                        font-weight: 500;
-                        margin-bottom: 0;
-                        margin-left: 15px;
-                     
-                    }
-                    .card-subtitle{
-                        display:inline-block;
-                        font-size: medium;
-                        font-weight: 300;
-                        margin: 5px 0 10px 15px ;
-                        
-                        width: 100%;
-                        overflow: hidden;
-                        white-space:nowrap;
-                        text-overflow :ellipsis ;
-                    }
-                    .price{
-                        margin: 42px 25px 10px 0;
-                        
-                        font-size:15px;
-                        font-weight: 700;
-                        text-wrap: nowrap;
-                    }
-            }
-
-            }
-        }
-    }  
-
-.commande{
-    display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
 
 
 /****** General pad ***********/

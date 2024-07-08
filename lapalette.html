@@ -13,16 +13,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
          crossorigin="anonymous" referrerpolicy="no-referrer">
-        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/menu.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <header class="header">
                 <div class="header__logo">
-                    <nav>
-                        <a  href="./index.html"  class="fa-solid fa-sharp fa-arrow-left">
-                        </a>
-                    </nav>
+                    <a  href="./index.html"  class="fa-solid fa-sharp fa-arrow-left"></a>
                     <a href="./index.html"><img class="header__logo--img" src="./assets/images/logo/ohmyfood.svg" alt="logo du site"></a>
                 </div>
     
@@ -35,10 +32,10 @@
         <main class="menu">
         
         
-        <div class="menu__titre"><h1 class="menu__name">La palette du goût</h1>
-        <div class="restaurants__cards-like" >
-            <input type="checkbox" id="heart-checkbox-2">
-            <label for="heart-checkbox-2" class="heart-label">
+        <div class="menu__title"><h1 class="menu__title--h1">La palette du goût</h1>
+        <div class="restaurants__cards-like">
+            <input type="checkbox" id="heart-checkbox-1">
+            <label for="heart-checkbox-1" class="heart-label">
                 <img class="restaurants__cards-like--unchecked" src="./assets/images/logo/heart.svg" title="like false">
                 <img class="restaurants__cards-like--checked" src="./assets/images/logo/heartpink.svg" title="like true">
             </label>
@@ -51,7 +48,7 @@
             <div class="menu__entrees">
                 <ul class=menu__entrees--ul> 
                     <li><span><p class="card-title">Fricassée d'escargots<p class="card-subtitle">Au piment d'Espelette</p></span><span><p class="price">25 €</p></span></li>
-                    <li><span><p class="card-title">WFoie gras de canard mi-cuit<p class="card-subtitle">Et ses copeaux de truffe noire</p></span><span><p class="price">35 €</p></span></li>
+                    <li><span><p class="card-title">Foie gras de canard mi-cuit<p class="card-subtitle">Et ses copeaux de truffe noire</p></span><span><p class="price">35 €</p></span></li>
                     <li><span><p class="card-title">Œuf au plat<p class="card-subtitle">Assaisonné à la truffe sur lit de caviar</p></span><span><p class="price">20 €</p></span></li>
                 </ul> 
             </div>    
@@ -61,9 +58,9 @@
             <hr>
             <div class="menu__plats">
                 <ul class=menu__plats--ul> 
-                    <li><span><p class="p1">Filet de bœuf aux herbes</p><p class="p2">Accompagné de sa ribambelle de légumes</p></span><span><p class="p3">40 €</p></span></li>
-                    <li><span><p class="p1">Parmentier de queue de bœuf</p><p class="p2">À la truffe noire sur sa purée de panais</p></span><span><p class="p3">35 €</p></span></li>
-                    <li><span><p class="p1">Filet de turbot</p><p class="p2">Aux agrumes</p></span><span><p class="p3">44 €</p></span></li>
+                    <li><span><p class="card-title">Filet de bœuf aux herbes</p><p class="card-subtitle">Accompagné de sa ribambelle de légumes</p></span><span><p class="price">40 €</p></span></li>
+                    <li><span><p class="card-title">Parmentier de queue de bœuf</p><p class="card-subtitle">À la truffe noire sur sa purée de panais</p></span><span><p class="price">35 €</p></span></li>
+                    <li><span><p class="card-title">Filet de turbot</p><p class="card-subtitle">Aux agrumes</p></span><span><p class="price">44 €</p></span></li>
                 </ul>
             </div>
         </article>
@@ -72,13 +69,13 @@
             <hr>
             <div class="menu__desserts">
                 <ul class=menu__desserts--ul>
-                    <li><span><p class="p1">Paris-Brest</p><p class="p2">Revisité</p></span><span><p class="p3">18 €</p></span></li>
-                    <li><span><p class="p1">Macaron au chocolat d'exception</p><p class="p2">Et glace à la vanille de Madagascar</p></span><span><p class="p3">22 €</p></span></li>
-                    <li><span><p class="p1">Mousse au chocolat</p><p class="p2">Au piment d'Espelette et à la truffe noire</p></span><span><p class="p3">23 €</p></span></li>
+                    <li><span><p class="card-title">Paris-Brest</p><p class="card-subtitle">Revisité</p></span><span><p class="price">18 €</p></span></li>
+                    <li><span><p class="card-title">Macaron au chocolat d'exception</p><p class="card-subtitle">Et glace à la vanille de Madagascar</p></span><span><p class="price">22 €</p></span></li>
+                    <li><span><p class="card-title">Mousse au chocolat</p><p class="card-subtitle">Au piment d'Espelette et à la truffe noire</p></span><span><p class="price">23 €</p></span></li>
                 </ul>
             </div>
         </article>
-        <i class="commande"> 
+        <i class="command"> 
             <button class="menu__button">Commander</button>
         </i>
    

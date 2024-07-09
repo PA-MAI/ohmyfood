@@ -10,10 +10,11 @@
 @import "partial/loader.css";
 @import "partial/header.css";
 @import "partial/cards.css";
- 
-* /*{
+/*@import "partial/location.css";*/
+
+* {
 	font-family: 'Roboto', sans-serif;
-}*/
+}
 ::before,
 ::after {
     box-sizing: border-box;

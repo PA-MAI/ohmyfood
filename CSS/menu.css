@@ -1,5 +1,5 @@
-/*page de menu*/
-/*@import "partial/cards.css";*/
+@charset "UTF-8";
+/*pages de menu*/
 @import "partial/header.css";
 ::before,
 ::after {
@@ -27,12 +27,6 @@ body {
      --shrikhand-font: "Shrikhand", sans-serif;
 }
 
-.header {
-     display: block;
-     width: 65%;
-     align-self: self-start;
-     margin-left: 10px;
-}
 .header :visited {
      color: black;
 }
@@ -41,28 +35,38 @@ body {
      text-decoration: none;
 }
 .header__logo {
-     display: flex;
-     flex-direction: row;
-     align-content: center;
-     justify-content: space-between;
+     width: 100%;
+     max-width: 768px;
+     grid-template-columns: 10% 90%;
+     display: inline-grid;
+     justify-content: center;
+     align-items: center;
 }
 .header__logo--img {
-     width: 80%;
-     margin: 5px 0 5px 15px;
+     justify-self: center;
+     display: block;
+     align-self: center;
+     max-height: 60px;
+     margin: 5px auto;
+     grid-column: 2/3;
 }
 .header__logo .fa-solid {
-     display: contents;
-     width: 10%;
+     grid-column: 1/2;
+     justify-self: start;
+     margin-left: 10px;
+     font-size: 22px;
      text-decoration: none;
-     padding-left: 25px;
-     margin-right: 10%;
+     color: black;
 }
 
 .hero {
-     background-image: url("../Assets/images/restaurants/jay-wennington-palette.jpg");
-     background-clip: padding-box;
-     background-size: cover;
+     /*background-clip:padding-box;
+     background-size :cover;*/
      height: 260px;
+}
+.hero img {
+     width: 100%;
+     height: auto;
 }
 
 /* pink like */
@@ -159,8 +163,8 @@ body {
      box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.42);
 }
 .menu__entrees, .menu__plats, .menu__desserts {
-     /*display:flex;
-     flex-direction: column;*/
+     opacity: 0; /* Commence par rendre les sections invisibles */
+     animation: fade-in 0.6s ease forwards; /* Animation de 0.6s, easing et maintien à la fin */
      margin-bottom: 20px;
 }
 .menu__entrees--ul, .menu__plats--ul, .menu__desserts--ul {
@@ -171,6 +175,7 @@ body {
      gap: 15px;
 }
 .menu__entrees--ul li, .menu__plats--ul li, .menu__desserts--ul li {
+     justify-content: space-evenly;
      display: flex;
      flex-direction: row;
      justify-content: space-between;
@@ -181,36 +186,109 @@ body {
      height: 72px;
      box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.09);
 }
+.menu__entrees--ul li .card-text, .menu__plats--ul li .card-text, .menu__desserts--ul li .card-text {
+     flex: 1;
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: start;
+}
+.menu__entrees--ul li .card-text .checkbox1, .menu__plats--ul li .card-text .checkbox1, .menu__desserts--ul li .card-text .checkbox1 {
+     position: relative;
+}
 .menu__entrees--ul li span .card-title, .menu__plats--ul li span .card-title, .menu__desserts--ul li span .card-title {
      font-size: large;
      font-weight: 500;
      margin-bottom: 0;
      margin-left: 15px;
      margin-top: 12px;
+     width: 100%;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     min-width: 0;
+     flex: 1;
+     max-width: 90%;
 }
 .menu__entrees--ul li span .card-subtitle, .menu__plats--ul li span .card-subtitle, .menu__desserts--ul li span .card-subtitle {
-     display: inline-block;
      font-size: medium;
      font-weight: 300;
      margin: 5px 0 10px 15px;
      width: 100%;
      overflow: hidden;
-     white-space: nowrap;
      text-overflow: ellipsis;
+     white-space: nowrap;
+     min-width: 0;
+     flex: 1;
+     max-width: 90%;
 }
-.menu__entrees--ul li span .price, .menu__plats--ul li span .price, .menu__desserts--ul li span .price {
-     margin: 40px 25px 10px 0;
+.menu__entrees--ul li .price, .menu__plats--ul li .price, .menu__desserts--ul li .price {
+     width: 10%;
+     align-items: end;
+     margin: 40px 10px 10px 0;
      font-size: 15px;
      font-weight: 700;
      text-wrap: nowrap;
 }
 
+/* apparition des entrées */
+@keyframes fade-in-entrees {
+     0% {
+          opacity: 0;
+          transform: translateY(20px);
+     }
+     100% {
+          opacity: 1;
+          transform: translateY(0);
+     }
+}
+/* apparition des plats */
+@keyframes fade-in-plats {
+     0% {
+          opacity: 0;
+          transform: translateY(20px);
+     }
+     100% {
+          opacity: 1;
+          transform: translateY(0);
+     }
+}
+/* apparition des desserts */
+@keyframes fade-in-desserts {
+     0% {
+          opacity: 0;
+          transform: translateY(20px);
+     }
+     100% {
+          opacity: 1;
+          transform: translateY(0);
+     }
+}
+/* Délais pour chaque section */
+.menu__entrees {
+     animation-name: fade-in-entrees;
+     animation-delay: 0.5s;
+}
+
+.menu__plats {
+     animation-name: fade-in-plats;
+     animation-delay: 1s;
+}
+
+.menu__desserts {
+     animation-name: fade-in-desserts;
+     animation-delay: 1.5s;
+}
+
+/* bouton commander*/
 .command {
      display: flex;
      justify-content: center;
      margin-top: 30px;
 }
 
+/*pied de page*/
 .footer {
      background-color: #353535;
      color: white;

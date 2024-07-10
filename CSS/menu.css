@@ -180,6 +180,14 @@ body {
      padding: 0;
      cursor: pointer;
      position: relative;
+}
+.menu__entrees--ul li, .menu__plats--ul li, .menu__desserts--ul li {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0;
+     cursor: pointer;
+     position: relative;
      /*input[type="checkbox"]{
      display:none;
      }
@@ -224,9 +232,10 @@ body {
      width: 70px;
      height: 100%;
      border-radius: 0 20px 20px 0;
+     z-index: 1;
 }
 .menu__entrees--ul li .checkbox input[type=checkbox], .menu__plats--ul li .checkbox input[type=checkbox], .menu__desserts--ul li .checkbox input[type=checkbox] {
-     display: none;
+     display: block;
      position: absolute;
      opacity: 0;
      width: 30px;
@@ -279,7 +288,7 @@ body {
      justify-content: space-between;
      align-items: start;
 }
-.menu__entrees--ul li span .card-title, .menu__plats--ul li span .card-title, .menu__desserts--ul li span .card-title {
+.menu__entrees--ul li .card-title, .menu__plats--ul li .card-title, .menu__desserts--ul li .card-title {
      font-size: large;
      font-weight: 500;
      margin-bottom: 0;
@@ -293,7 +302,7 @@ body {
      flex: 1;
      max-width: 90%;
 }
-.menu__entrees--ul li span .card-subtitle, .menu__plats--ul li span .card-subtitle, .menu__desserts--ul li span .card-subtitle {
+.menu__entrees--ul li .card-subtitle, .menu__plats--ul li .card-subtitle, .menu__desserts--ul li .card-subtitle {
      font-size: medium;
      font-weight: 300;
      margin: 5px 0 10px 15px;

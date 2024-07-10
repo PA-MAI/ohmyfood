@@ -180,105 +180,41 @@ body {
      padding: 0;
      cursor: pointer;
      position: relative;
-}
-.menu__entrees--ul li, .menu__plats--ul li, .menu__desserts--ul li {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     padding: 0;
-     cursor: pointer;
-     position: relative;
-     /*input[type="checkbox"]{
-     display:none;
-     }
-
-     label {
-         display: block;
-         width: 20px;
-         height: 20px;
-         border-radius: 50px 50px;
-         background-color: white;
-         margin-top:22px;
-         margin-left: 20px;
-         &:before{
-             content: " ";
-             color: white;
-         }
-         &:after {
-             width: 60px;
-             height: 20px;
-             margin-left: 3px;
-             content: "✔";
-             color: var(--tertiary-color);
-           }
-
-         }       */
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     gap: 5px;
      background-color: white;
-     width: 100%;
-     border-radius: 20px 20px 20px 20px;
-     height: 72px;
-     box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.09);
+     border-radius: 20px;
+     box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.08);
 }
 .menu__entrees--ul li .checkbox, .menu__plats--ul li .checkbox, .menu__desserts--ul li .checkbox {
-     position: relative;
+     position: absolute;
+     right: -70px;
      display: flex;
      align-items: center;
-     transition: all 0.8s ease-in-out;
-     background-color: #99E2D0;
+     justify-content: center;
      width: 70px;
      height: 100%;
+     background-color: #99e2d0;
      border-radius: 0 20px 20px 0;
-     z-index: 1;
-}
-.menu__entrees--ul li .checkbox input[type=checkbox], .menu__plats--ul li .checkbox input[type=checkbox], .menu__desserts--ul li .checkbox input[type=checkbox] {
-     display: block;
-     position: absolute;
+     transition: all 0.3s ease-in-out;
      opacity: 0;
-     width: 30px;
-     height: 30px;
-     background-color: white;
-     /* &::after {
-           width: 60px;
-           height: 50px;
-           margin-left: 3px;
-           content: "✔";
-           color: var(--tertiary-color);
-     }*/
 }
-.menu__entrees--ul li .checkbox input[type=checkbox]:checked + label, .menu__plats--ul li .checkbox input[type=checkbox]:checked + label, .menu__desserts--ul li .checkbox input[type=checkbox]:checked + label {
-     background-color: white;
-     border: 0 solid white;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     color: var(--tertiary-color);
-     border-radius: 50px 50px;
-     width: 30px;
-     height: 30px;
-     margin-left: 20px;
-}
-.menu__entrees--ul li .checkbox input[type=checkbox]:checked + label::before, .menu__plats--ul li .checkbox input[type=checkbox]:checked + label::before, .menu__desserts--ul li .checkbox input[type=checkbox]:checked + label::before {
-     display: none;
-}
-.menu__entrees--ul li .checkbox input[type=checkbox]:checked + label::after, .menu__plats--ul li .checkbox input[type=checkbox]:checked + label::after, .menu__desserts--ul li .checkbox input[type=checkbox]:checked + label::after {
-     display: inline-block;
+.menu__entrees--ul li .checkbox::before, .menu__plats--ul li .checkbox::before, .menu__desserts--ul li .checkbox::before {
      content: "✔";
+     color: var(--tertiary-color);
 }
-.menu__entrees--ul li .checkbox input[type=checkbox] label, .menu__plats--ul li .checkbox input[type=checkbox] label, .menu__desserts--ul li .checkbox input[type=checkbox] label {
-     display: block;
+.menu__entrees--ul li .checkbox::after, .menu__plats--ul li .checkbox::after, .menu__desserts--ul li .checkbox::after {
+     content: "✔";
+     color: var(--tertiary-color);
+}
+.menu__entrees--ul li + label, .menu__plats--ul li + label, .menu__desserts--ul li + label {
+     display: none;
      position: absolute;
-     width: 30px;
+     width: 60px;
      height: 30px;
-     border: 1px red;
-     /*border-radius: 50px 50px;*/
      background-color: white;
      margin-top: 18px;
      margin-left: 20px;
      transition: all 0.8s ease-in-out;
+     border: 1px red;
 }
 .menu__entrees--ul li .card-text, .menu__plats--ul li .card-text, .menu__desserts--ul li .card-text {
      flex: 1;
@@ -288,6 +224,17 @@ body {
      justify-content: space-between;
      align-items: start;
 }
+.menu__entrees--ul li .card-text .card-title,
+.menu__entrees--ul li .card-text .card-subtitle, .menu__plats--ul li .card-text .card-title,
+.menu__plats--ul li .card-text .card-subtitle, .menu__desserts--ul li .card-text .card-title,
+.menu__desserts--ul li .card-text .card-subtitle {
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     min-width: 0;
+     flex: 1;
+     max-width: 75%;
+}
 .menu__entrees--ul li .card-title, .menu__plats--ul li .card-title, .menu__desserts--ul li .card-title {
      font-size: large;
      font-weight: 500;
@@ -295,85 +242,44 @@ body {
      margin-left: 15px;
      margin-top: 12px;
      width: 100%;
-     overflow: hidden;
-     text-overflow: ellipsis;
-     white-space: nowrap;
-     min-width: 0;
-     flex: 1;
-     max-width: 90%;
 }
 .menu__entrees--ul li .card-subtitle, .menu__plats--ul li .card-subtitle, .menu__desserts--ul li .card-subtitle {
      font-size: medium;
      font-weight: 300;
      margin: 5px 0 10px 15px;
      width: 100%;
-     overflow: hidden;
-     text-overflow: ellipsis;
-     white-space: nowrap;
-     min-width: 0;
-     flex: 1;
-     max-width: 90%;
 }
 .menu__entrees--ul li .price, .menu__plats--ul li .price, .menu__desserts--ul li .price {
      width: 10%;
      margin: 40px 10px 10px 0;
      font-size: 15px;
      font-weight: 700;
-     text-wrap: nowrap;
-}
-.menu__entrees--ul li:hover .checkbox, .menu__entrees--ul li:hover .checkbox label, .menu__plats--ul li:hover .checkbox, .menu__plats--ul li:hover .checkbox label, .menu__desserts--ul li:hover .checkbox, .menu__desserts--ul li:hover .checkbox label {
-     transform: translateX(-70px);
+     white-space: nowrap;
+     transition: transform 0.3s ease-in-out;
 }
 .menu__entrees--ul li:hover .price, .menu__plats--ul li:hover .price, .menu__desserts--ul li:hover .price {
-     transform: translateX(-70px);
-}
-.menu__entrees--ul li:hover input[type=checkbox], .menu__plats--ul li:hover input[type=checkbox], .menu__desserts--ul li:hover input[type=checkbox] {
-     opacity: 1;
-}
-.menu__entrees--ul li:hover input[type=checkbox]:not(:checked), .menu__plats--ul li:hover input[type=checkbox]:not(:checked), .menu__desserts--ul li:hover input[type=checkbox]:not(:checked) {
-     opacity: 1;
-}
-.menu__entrees--ul li:hover input[type=checkbox]:not(:checked) + label, .menu__plats--ul li:hover input[type=checkbox]:not(:checked) + label, .menu__desserts--ul li:hover input[type=checkbox]:not(:checked) + label {
-     animation: slideIn 0.8s backwards;
-}
-.menu__entrees--ul li:hover input[type=checkbox]:not(:checked):hover, .menu__plats--ul li:hover input[type=checkbox]:not(:checked):hover, .menu__desserts--ul li:hover input[type=checkbox]:not(:checked):hover {
-     opacity: 1;
-}
-.menu__entrees--ul li:hover input[type=checkbox]:checked + label, .menu__plats--ul li:hover input[type=checkbox]:checked + label, .menu__desserts--ul li:hover input[type=checkbox]:checked + label {
-     animation: slideIn 0.5s backwards;
-}
-.menu__entrees--ul li:active input[type=checkbox], .menu__plats--ul li:active input[type=checkbox], .menu__desserts--ul li:active input[type=checkbox] {
-     opacity: 1;
-}
-.menu__entrees--ul li:active input[type=checkbox]:not(:checked) + label, .menu__plats--ul li:active input[type=checkbox]:not(:checked) + label, .menu__desserts--ul li:active input[type=checkbox]:not(:checked) + label {
-     animation: slideIn 0.5s forwards;
-}
-.menu__entrees--ul li:active input[type=checkbox]:not(:checked):hover, .menu__plats--ul li:active input[type=checkbox]:not(:checked):hover, .menu__desserts--ul li:active input[type=checkbox]:not(:checked):hover {
-     opacity: 1;
-}
-.menu__entrees--ul li:active input[type=checkbox]:checked + label, .menu__plats--ul li:active input[type=checkbox]:checked + label, .menu__desserts--ul li:active input[type=checkbox]:checked + label {
-     animation: slideIn 0.5s forwards;
-}
-.menu__entrees--ul li:hover .checkbox input[type=checkbox], .menu__plats--ul li:hover .checkbox input[type=checkbox], .menu__desserts--ul li:hover .checkbox input[type=checkbox] {
-     opacity: 1;
-     right: 10px;
-     transition: right 0.8s ease-in-out, opacity 0.5s ease-in-out;
+     transform: translateX(-55px);
 }
 .menu__entrees--ul li:hover .checkbox, .menu__plats--ul li:hover .checkbox, .menu__desserts--ul li:hover .checkbox {
-     right: 10px;
-     transition: right 0.8s ease-in-out, opacity 0.5s ease-in-out;
+     right: 0px;
+     opacity: 1;
 }
 
-@keyframes slideIn {
+@keyframes fade-in {
      from {
-          right: -70;
           opacity: 0;
      }
      to {
-          right: 70;
           opacity: 1;
      }
 }
+/*
+  @mixin truncate-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+*/
 /* apparition des entrées */
 @keyframes fade-in-entrees {
      0% {

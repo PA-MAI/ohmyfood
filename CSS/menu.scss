@@ -162,300 +162,184 @@ body {
     white-space: nowrap;
     min-width: 0;
     flex: 1;
-    max-width: 90%;
+    max-width: 75%;
                        
   }
 
 
-.menu{
-    display:flex;
+  .menu {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 40px 40px 0 0;
-    background-color:var(--grey-button);
-    padding:13px;
-    margin-bottom:0;
+    background-color: var(--grey-button);
+    padding: 13px;
+    margin-bottom: 0;
     margin-top: -50px;
-    &__title{
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-        .restaurants__cards-like{
-            input{
-            width: 20%;
-            margin-top:40px;
+  
+    &__title {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  
+      .restaurants__cards-like {
+        input {
+          width: 20%;
+          margin-top: 40px;
         }
-        }   
-        &--h1{
-            font-family:var(--shrikhand-font);
-            font-size: 28px;
-            font-weight: 400;
-            
+      }
+  
+      &--h1 {
+        font-family: var(--shrikhand-font);
+        font-size: 28px;
+        font-weight: 400;
+        align-items: center;
+        width: 80%;
+      }
+    }
+  
+    h2 {
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+  
+    hr {
+      width: 40px;
+      margin: 10px 0 15px 0;
+      text-align: left;
+      border: 2px solid var(--tertiary-color);
+    }
+  
+    &__button {
+      @include pink-button;
+      padding: 10px 45px 10px 45px;
+    }
+  
+    &__entrees,
+    &__plats,
+    &__desserts {
+      opacity: 0; /* Commence par rendre les sections invisibles */
+      animation: fade-in 0.6s ease forwards; /* Animation de 0.6s, easing et maintien à la fin */
+      margin-bottom: 20px;
+  
+      &--ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        padding: 0;
+        gap: 15px;
+  
+        li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0;
+          cursor: pointer;
+          position: relative;
+          background-color: white;
+          border-radius: 20px;
+          box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.08);
+
+          .checkbox {
+            position: absolute;
+            right: -70px;
+            display: flex;
             align-items: center;
-            width:80%;
-
+            justify-content: center;
+            width: 70px;
+            height: 100%;
+            background-color: #99e2d0;
+            border-radius: 0 20px 20px 0;
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            &::before {
+              content: "✔";
+              color: var(--tertiary-color);
+            }
+            &::after {
+              content: "✔";
+              color: var(--tertiary-color);
+            }
+            }
+            & + label {
+            display: none;
+            position: absolute;
+            width: 60px;
+            height: 30px;
+            background-color: white;
+            margin-top: 18px;
+            margin-left: 20px;
+            transition: all 0.8s ease-in-out;
+            border: 1px red;
+          }
+          .card-text {
+            flex: 1;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+  
+            .card-title,
+            .card-subtitle {
+              @include truncate-text;
+            }
+          }
+  
+          .card-title {
+            font-size: large;
+            font-weight: 500;
+            margin-bottom: 0;
+            margin-left: 15px;
+            margin-top: 12px;
+            width: 100%;
+          }
+  
+          .card-subtitle {
+            font-size: medium;
+            font-weight: 300;
+            margin: 5px 0 10px 15px;
+            width: 100%;
+          }
+  
+          .price {
+            width: 10%;
+            margin: 40px 10px 10px 0;
+            font-size: 15px;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: transform 0.3s ease-in-out;
+          }
+  
+          &:hover .price {
+            transform: translateX(-55px);
+          }
+  
+          &:hover .checkbox {
+            right: 0px;
+            opacity: 1;
+          }
         }
-    }
-    
-    h2{
-        font-size: 18px;
-        font-weight: 300;
-        margin-bottom: 10px;
-    }
-    hr{
-        width: 40px;
-        margin: 10px 0 15px 0;
-        text-align: left;
-        border: 2px solid var(--tertiary-color);              
-    }  
-
-    &__button{
-            @include pink-button;
-            padding: 10px 45px 10px 45px;
-
-        }
-    &__entrees, &__plats, &__desserts{
-        opacity: 0; /* Commence par rendre les sections invisibles */
-        animation: fade-in 0.6s ease forwards; /* Animation de 0.6s, easing et maintien à la fin */
-    
-            margin-bottom: 20px;
-            &--ul {
-                display:flex;
-                flex-direction: column;
-                list-style-type: none;
-                padding:0;
-                gap:15px;
-                
-                li {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    padding: 0;
-                    cursor: pointer;
-                    position: relative;
-                 }
-                 li {
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                  padding: 0;
-                  cursor: pointer;
-                  position: relative;
-                 
-                  .checkbox {
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    transition: all 0.8s ease-in-out;
-                    background-color: #99E2D0;
-                    width:70px;
-                    height: 100%;
-                    border-radius: 0 20px 20px 0;
-                    z-index: 1;
-
-                    input[type="checkbox"] {
-                      
-                      display:block;
-                      position: absolute;
-                      opacity: 0;
-                      width: 30px;
-                      height: 30px;
-                      background-color: white;
-            
-                      &:checked + label {
-                        background-color: white;
-                        border: 0 solid white;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        color: var(--tertiary-color);
-                        border-radius: 50px 50px;
-                        width:30px;
-                        height: 30px;
-                        margin-left: 20px;
-                        &::before{
-                          display:none;
-                        }  
-                        &::after {
-                          display: inline-block;
-                          content: "✔";
-                        }
-                      }
-                      label {
-                          display: block;
-                          position: absolute;
-                          width: 30px;
-                          height: 30px;
-                          border: 1px red;
-                          /*border-radius: 50px 50px;*/
-                          background-color: white;
-                          margin-top:18px;
-                          margin-left: 20px;
-                          transition: all 0.8s ease-in-out;
-                        
-                          }
-                         /* &::after {
-                              width: 60px;
-                              height: 50px;
-                              margin-left: 3px;
-                              content: "✔";
-                              color: var(--tertiary-color);
-                        }*/
-                      }
-                
-                      
-                    }
-                      /*input[type="checkbox"]{
-                      display:none;
-                      }
-                      
-                      label {
-                          display: block;
-                          width: 20px;
-                          height: 20px;
-                          border-radius: 50px 50px;
-                          background-color: white;
-                          margin-top:22px;
-                          margin-left: 20px;
-                          &:before{
-                              content: " ";
-                              color: white;
-                          }
-                          &:after {
-                              width: 60px;
-                              height: 20px;
-                              margin-left: 3px;
-                              content: "✔";
-                              color: var(--tertiary-color);
-                            }
-                
-                          }       */
-
-
-                    @include menu-card;
-                    .card-text{
-                    flex: 1;
-                    overflow: hidden;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    align-items: start;
-                    
-                    }
-
-                    .card-title{
-                        
-                        font-size: large;
-                        font-weight: 500;
-                        margin-bottom: 0;
-                        margin-left: 15px;
-                        margin-top: 12px;
-                        width: 100%;
-                        @include truncate-text;
-                     
-                    }
-                    .card-subtitle{
-                        
-                        font-size: medium;
-                        font-weight: 300;
-                        margin: 5px 0 10px 15px ;
-                        width: 100%;
-                        @include truncate-text;
-                    }
-                    .price{
-                        width: 10%;
-                        margin: 40px 10px 10px 0;
-                        font-size:15px;
-                        font-weight: 700;
-                        text-wrap: nowrap;
-                        
-                    }
-                    &:hover .checkbox, &:hover .checkbox label {
-                      transform: translateX(-70px);
-                      }
-
-                      &:hover .price {
-                          transform: translateX(-70px);
-                      }
-
-    &:hover input[type="checkbox"] {
-      opacity: 1;
-    }
-
-    &:hover input[type="checkbox"]:not(:checked) {
-      opacity: 1;
-    }
-
-    &:hover input[type="checkbox"]:not(:checked) + label {
-      animation: slideIn 0.8s backwards;
-    }
-
-    &:hover input[type="checkbox"]:not(:checked) {
-      &:hover {
-        opacity: 1;
       }
     }
-
-    &:hover input[type="checkbox"] {
-      &:checked + label {
-        animation: slideIn 0.5s backwards ;
-      }
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
     }
-
-    &:active input[type="checkbox"] {
+    to {
       opacity: 1;
     }
-
-    &:active input[type="checkbox"]:not(:checked) + label {
-      animation: slideIn 0.5s forwards;
-    }
-
-    &:active input[type="checkbox"]:not(:checked) {
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    &:active input[type="checkbox"] {
-      &:checked + label {
-        animation: slideIn 0.5s forwards;
-      }
-    }
-
-    &:hover .checkbox input[type="checkbox"] {
-      opacity: 1;
-      right: 10px;
-      transition: right 0.8s ease-in-out, opacity 0.5s ease-in-out;
-      
-    }
-
-    &:hover .checkbox {
-      right: 10px;
-      transition: right 0.8s ease-in-out, opacity 0.5s ease-in-out;
-
-     
-      
-    }
   }
+  /*
+  @mixin truncate-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-}
-}
-
-
-
-
-// Slide-in animation for the checkbox
-@keyframes slideIn {
-  from {
-    right: -70;
-    opacity: 0;
-  }
-  to {
-    right: 70;
-    opacity: 1;
-  }
-}
-
+*/
 /* apparition des entrées */
 @keyframes fade-in-entrees {
     0% {

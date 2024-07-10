@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+    <head>
+        <meta charset="utf-8">
+        <title>ohmyfood</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/svg+xml" href="./assets/images/logo/ohmyfood.svg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+         crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="./css/menu.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header class="header">
+                <div class="header__logo">
+                    <a  href="./index.html"  class="fa-solid fa-sharp fa-arrow-left"></a>
+                    <a href="./index.html"><img class="header__logo--img" src="./assets/images/logo/ohmyfood.svg" alt="logo du site"></a>
+                </div>
+    
+                
+        </header>
+        <nav class="hero">
+            <img class="restaurants__cards--img" src="./assets/images/restaurants/stil-enchante.jpg" alt="plat cuisiné blanc de poulet  accompagné de boulettes de pommes de terre et olives">
+        </nav>
+        
+        <main class="menu">
+        
+        
+        <div class="menu__title"><h1 class="menu__title--h1">La note enchantée</h1>
+        <div class="restaurants__cards-like">
+            <input type="checkbox" id="heart-checkbox-1">
+            <label for="heart-checkbox-1" class="heart-label">
+                <img class="restaurants__cards-like--unchecked" src="./assets/images/logo/heart.svg" title="like false">
+                <img class="restaurants__cards-like--checked" src="./assets/images/logo/heartpink.svg" title="like true">
+            </label>
+        </div>
+        </div>
+
+        <article>
+            <h2>ENTRÉES</h2>
+            <hr>
+            <div class="menu__entrees">
+                <ul class=menu__entrees--ul> 
+                    <li><span class="card-text"><p class="card-title">Ravioles de foie gras</p><p class="card-subtitle">Accompagnées de leur crème à la truffe</p></span><span class="price">25 €</span><span class="checkbox">
+                        <input type="checkbox" id="anim1" /><label for="anim1" class="label"></label></span></li>
+                    <li><span class="card-text"><p class="card-title">Caviar osciètre</p><p class="card-subtitle">Sur blini à la farine de blé noir</p></span><span class="price">35 €</span><span class="checkbox">
+                        <input type="checkbox" id="anim1" /><label for="anim1" aria-describedby="label"></label></span></li>
+                    <li><span class="card-text"><p class="card-title">Homard et espuma de potiron</p><p class="card-subtitle">Marinés aux zestes d'orange</p></span><span class="price">20 €</span><span class="checkbox">
+                        <input type="checkbox" id="anim1" /><label for="anim1" aria-describedby="label"></label></span></li>
+                    <li><span class="card-text"><p class="card-title">Foie gras de canard cuit entier</p><p class="card-subtitle">Confiture de figue et pain toasté</p></span><span class="price">35 €</span><span class="checkbox">
+                        <input type="checkbox" id="anim1" /><label for="anim1" aria-describedby="label"></label></span></li>
+                </ul> 
+            </div>    
+        </article>
+        <article>
+            <h2>PLATS</h2>
+            <hr>
+            <div class="menu__plats">
+                <ul class=menu__plats--ul> 
+                    <li><span class="card-text"><p class="card-title">Noix de coquilles Saint-Jacques</p><p class="card-subtitle">Sur lit de purée de céleri-rave</p></span><span class="price">40 €</span><span class="checkbox">
+                        <input type="checkbox" id="anim1" /><label for="anim1" class="label"></label></span></li>
+                    <li><span class="card-text"><p class="card-title">Langoustine poêlée</p><p class="card-subtitle">Purée de patate douce</p></span><span class="price">35 €</span><span class="checkbox">
+                        <input type="checkbox" id="anim1" /><label for="anim1" class="label"></label></span></li>
+                    <li><span class="card-text"><p class="card-title">Mijoté de queue de bœuf</p><p class="card-subtitle">Et riz sauvage aux zestes de citron</p></span><span class="price">44 €</span><span class="checkbox">
+                        <input type="checkbox" id="anim1" /><label for="anim1" class="label"></label></span></li>
+                </ul>
+            </div>
+        </article>
+        <article>
+            <h2>DESSERTS</h2>
+            <hr>
+            <div class="menu__desserts">
+                <ul class=menu__desserts--ul>
+                    <li><span class="card-text"><p class="card-title">Macaron noisette et chocolat</p><p class="card-subtitle">Glace au caramel brun et sel de Guérande</p></span><span class="price">18 €</span><span class="checkbox">
+                        <input type="checkbox" id="anim1" /><label for="anim1" class="label"></label></span></li>
+                    <li><span class="card-text"><p class="card-title">Baba au rhum revisité</p><p class="card-subtitle">Avec son coulis de citron</p></span><span class="price">22 €</span><span class="checkbox">
+                        <input type="checkbox" id="anim1" /><label for="anim1" class="label"></label></span></li>
+                    <li><span class="card-text"><p class="card-title">Tarte au citron meringuée</p><p class="card-subtitle">Déstructurée</p></span><span class="price">23 €</span><span class="checkbox">
+                        <input type="checkbox" id="anim1" /><label for="anim1" class="label"></label></span></li>
+                </ul>
+            </div>
+        </article>
+        <i class="command"> 
+            <button class="menu__button">Commander</button>
+        </i>
+   
+    </main>
+    <footer class="footer">
+        <img class="footer__logo" src="./assets/images/logo/ohmyfoodwhite.svg" alt="logo du site">
+            <ul> 
+                <li><a href=""><img src="./Assets/images/logo/couverts.svg" alt="icone couverts de table">Proposer un restaurant</a></li>
+                <li><a href=""><img src="./Assets/images/logo/mains.svg" alt="icone de mains jointes">Devenir partenaire</a></li>
+                <li><a href="">Mentions légales</a></li>
+                <li><a href="mailto:exemple@gmail.com">Contact</a></li>
+            </ul> 
+        </Footer>
+
+
+    </body>

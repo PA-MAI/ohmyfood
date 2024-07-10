@@ -8,7 +8,12 @@
 @import "partial/loader.css";
 @import "partial/header.css";
 @import "partial/cards.css";
-* ::before,
+/*@import "partial/location.css";*/
+* {
+     font-family: "Roboto", sans-serif;
+}
+
+::before,
 ::after {
      box-sizing: border-box;
      margin: 0;
@@ -22,7 +27,7 @@
      --grey-button:rgba(246, 246, 246, 1);
      --green-text:#008766;
      font-family: "Roboto", sans-serif;
-     --shrikhand-font: "Shrikhand", serif;
+     --shrikhand-font: "Shrikhand", sans-serif;
 }
 
 /*@mixin h1-tab {
@@ -80,9 +85,39 @@ body {
      font-size: large;
      font-weight: 500;
      box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.22);
+     position: relative;
+     z-index: 1;
 }
 .explore__title .button:hover {
      opacity: 0.7;
+     box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.42);
+     transition: opacity 350ms ease;
+}
+.explore__title .button::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     border-radius: 30px 30px 30px 30px;
+     background: linear-gradient(#ff93e1 0%, #782cd3 100%);
+     z-index: -1;
+     opacity: 1;
+     transition: opacity 550ms ease;
+}
+.explore__title .button::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     border-radius: 30px 30px 30px 30px;
+     background: linear-gradient(#ff93e1 0%, #782cd3 100%);
+     z-index: -1;
+     opacity: 0.5;
+     transition: opacity 350ms ease;
 }
 .explore__function {
      background-color: white;
@@ -126,11 +161,8 @@ body {
      border-radius: 20px;
      color: white;
      position: inherit;
-     margin-left: -10px;
-     padding-left: 7px;
-     margin-right: 5px;
-     padding-top: 3px;
-     padding-bottom: 3px;
+     margin: 3px 5px 0 -10px;
+     padding: 3px 7px 3px 7px;
      font-size: 14px;
 }
 .explore__function--ul li .fa-store {
@@ -163,6 +195,9 @@ body {
 .footer ul li a {
      font-family: "Roboto", sans-serif;
      color: white;
+}
+.footer ul li a img {
+     padding-right: 10px;
 }
 
 /****** General pad ***********/

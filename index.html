@@ -26,24 +26,21 @@
         </div>
         <header class="header">
             <div class="header__logo">
-                <nav>
-                    <a  href="./index.html"  class="fa-solid fa-sharp fa-arrow-left">
-                    </a>
-                </nav>
+               
                 <a href="./index.html"><img class="header__logo--img" src="./assets/images/logo/ohmyfood.svg" alt="logo du site"></a>
             </div>
 
             <div class="header__location">
                 <form class="header__location--result" action="input" >
-                       <label class="location__icon">
-                       <span ><i id="fa-solid" class="fa-solid fa-location-dot"></i>Paris, Belleville</span> 
+                       
+                       <span ><i id="fa-solid" class="fa-solid fa-location-dot"></i><input type="text" id="location" name="location_input" value="Paris, Belleville" ></span> 
                        </label>
                        
                  </form>
             </div>
         
     </header>
-        <hero class="explore">
+        <nav class="explore">
             <section class="explore__title">
                 <div> 
                 <h1>Réservez le menu qui vous convient</h1>
@@ -64,18 +61,19 @@
                     <li><span class=circle >3</span><i class="fa-solid fa-store"></i>Dégustez au restaurant</li>
                </ul> 
             </div>
-        </hero> 
+        
+        </nav> 
         <main>
             <section id="rest" class="restaurants">
                 <h2>Restaurants</h2>
-                <articles class="restaurants__articles">
+                <div class="restaurants__art">
                     <article class="restaurants__cards">
-                        <a href="#" class="restaurant__cards--link">
+                        <a href="lapalette.html" class="restaurant__cards--link">
                             <img class="restaurants__cards--img" src="./assets/images/restaurants/jay-wennington-palette.jpg" alt="plat cuisiné saumon et salade présentation gastronomique accompagné de tranches de pain">
                             <div class="new-badge">Nouveau</div>
                         </a>
                         <div class="restaurants__cards-txt">
-                                <a href="#"><h3 class="restaurants__cards-title">La palette du goût</h3></a>
+                                <a href="lapalette.html"><h3 class="restaurants__cards-title">La palette du goût</h3></a>
                                 <div class="restaurants__cards-like">
                                     <input type="checkbox" id="heart-checkbox-1">
                                     <label for="heart-checkbox-1" class="heart-label">
@@ -83,17 +81,17 @@
                                         <img class="restaurants__cards-like--checked" src="./assets/images/logo/heartpink.svg" title="like true">
                                     </label>
                                 </div>
-                                <a href="#"><p class="restaurants__cards-subtitle">Ménilmontant</p></a>
+                                <a href="lapalette.html"><p class="restaurants__cards-subtitle">Ménilmontant</p></a>
                         </div>
                     </article>
                      
                      
                     <article class="restaurants__cards">
-                        <a href="#"class="restaurant__cards--link"><img class="restaurants__cards--img" src="./assets/images/restaurants/stil-enchante.jpg" alt="plat cuisiné blanc de poulet  accompagné de boulettes de pommes de terre et olives">
+                        <a href="enchante.html" class="restaurant__cards--link"><img class="restaurants__cards--img" src="./assets/images/restaurants/stil-enchante.jpg" alt="plat cuisiné blanc de poulet  accompagné de boulettes de pommes de terre et olives">
                             <div class="new-badge">Nouveau</div>
                         </a>  
                             <div class="restaurants__cards-txt">
-                                <a href="#"><h3 class="restaurants__cards-title">La note enchantée</h3></a>
+                                <a href="enchante.html"><h3 class="restaurants__cards-title">La note enchantée</h3></a>
                                 <div class="restaurants__cards-like">
                                     <input type="checkbox" id="heart-checkbox-2">
                                     <label for="heart-checkbox-2" class="heart-label">
@@ -101,16 +99,16 @@
                                         <img class="restaurants__cards-like--checked" src="./assets/images/logo/heartpink.svg" title="like true">
                                     </label>
                                 </div>
-                                 <a href="#"><p class="restaurants__cards-subtitle">Charonne</p></a>
+                                 <a href="enchante.html"><p class="restaurants__cards-subtitle">Charonne</p></a>
                             </div>
                          </article>
 
                         <article class="restaurants__cards">
-                            <a href="#" class="restaurant__cards--link"><img class="restaurants__cards--img" src="./assets/images/restaurants/toa-francaise.jpg" alt="plat cuisiné tartine d'épinard et boules de cremes glacées présentation gastronomique">
-                                
+                            <a href="francaise.html" class="restaurant__cards--link">
+                                <img class="restaurants__cards--img" src="./assets/images/restaurants/toa-francaise.jpg" alt="plat cuisiné tartine d'épinard et boules de cremes glacées présentation gastronomique">
                             </a>
                                <div class="restaurants__cards-txt">
-                                <a href="#"><h3 class="restaurants__cards-title">À la française</h3></a>
+                                <a href="francaise.html"><h3 class="restaurants__cards-title">À la française</h3></a>
                                 <div class="restaurants__cards-like">
                                     <input type="checkbox" id="heart-checkbox-3">
                                     <label for="heart-checkbox-3" class="heart-label">
@@ -118,14 +116,13 @@
                                         <img class="restaurants__cards-like--checked" src="./assets/images/logo/heartpink.svg" title="like true">
                                     </label>
                                 </div>
-                                 <a href="#"><p class="restaurants__cards-subtitle">Cité Rouge</p></a>
+                                 <a href="francaise.html"><p class="restaurants__cards-subtitle">Cité Rouge</p></a>
                                 </div>
                          </article>
-                    
                         <article class="restaurants__cards">
-                            <a href="#"class="restaurant__cards--link"><img class="restaurants__cards--img" src="./assets/images/restaurants/louis-hansel-delice.jpg" alt="plat cuisiné saumon et salade présentation gastronomique accompagné de tranches de pain"></a>
+                            <a href="delice.html" class="restaurant__cards--link"><img class="restaurants__cards--img" src="./assets/images/restaurants/louis-hansel-delice.jpg" alt="plat cuisiné saumon et salade présentation gastronomique accompagné de tranches de pain"></a>
                                <div class="restaurants__cards-txt">
-                                <a href="#"><h3 class="restaurants__cards-title">Le délice des sens</h3></a>
+                                <a href="delice.html"><h3 class="restaurants__cards-title">Le délice des sens</h3></a>
                                 <div class="restaurants__cards-like">
                                     <input type="checkbox" id="heart-checkbox-4">
                                     <label for="heart-checkbox-4" class="heart-label">
@@ -133,21 +130,20 @@
                                         <img class="restaurants__cards-like--checked" src="./assets/images/logo/heartpink.svg" title="like true">
                                     </label>
                                 </div>
-                                 <a href="#"><p class="restaurants__cards-subtitle">Folie-Méricourt</p></a>
+                                 <a href="delice.html"><p class="restaurants__cards-subtitle">Folie-Méricourt</p></a>
                                  </div>
                          </article>
-                     </a>
-                </articles>
+                    </div>
             </section>
         </main>
         <footer class="footer">
             <img class="footer__logo" src="./assets/images/logo/ohmyfoodwhite.svg" alt="logo du site">
             
             <ul> 
-                <li><a href="">Proposer un restaurant</a></li>
-                <li><a href="">Devenir partenaire</a></li>
+                <li><a href=""><img src="./Assets/images/logo/couverts.svg" alt="représentation de couverts">Proposer un restaurant</a></li>
+                <li><a href=""><img src="./Assets/images/logo/mains.svg" alt="représentation de mains jointes">Devenir partenaire</a></li>
                 <li><a href="">Mentions légales</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="mailto:exemple@gmail.com">Contact</a></li>
            </ul> 
         </footer>
      

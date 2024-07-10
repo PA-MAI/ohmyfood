@@ -3,6 +3,7 @@
      flex-direction: column;
      background-color: rgb(246, 246, 246);
      padding-top: 34px;
+     /* pink like */
 }
 .restaurants a:visited {
      color: black;
@@ -16,7 +17,7 @@
      font-size: 22px;
      margin: 0 0 0 25px;
 }
-.restaurants__articles {
+.restaurants__art {
      display: flex;
      flex-direction: column;
      justify-content: space-between;
@@ -67,8 +68,8 @@
      margin-top: 5px;
      position: relative;
      display: inline-block;
-     width: 90px;
-     height: 30px;
+     width: 35px;
+     height: 35px;
 }
 .restaurants__cards-like input[type=checkbox] {
      display: none;
@@ -84,10 +85,10 @@
      position: relative;
 }
 .restaurants__cards-like .heart-label img {
-     width: 30px;
-     height: 30px;
+     width: 40px;
+     height: 40px;
      position: absolute;
-     margin-top: 30%;
+     margin-top: 90%;
      left: 20%;
      right: 30%;
      transform: translate(-50%, -50%);
@@ -104,16 +105,17 @@
      height: 170px;
 }
 
+/* encarts "nouveau" */
 .new-badge {
      position: relative;
      height: 18px;
      width: 55px;
-     top: -95%; /* Ajustez la position verticale selon vos besoins */
-     right: -70%; /* Ajustez la position horizontale selon vos besoins */
-     background-color: #99E2D0; /* Couleur verte pour l'encart */
-     color: #008766; /* Couleur du texte */
-     padding: 5px 10px; /* Espacement interne */
-     font-size: 14px; /* Taille de la police */
-     font-weight: 500; /* Gras */
-     border-radius: 2px; /* Coins arrondis */
+     top: -95%;
+     right: -70%;
+     background-color: #99E2D0;
+     color: #008766;
+     padding: 5px 10px;
+     font-size: 14px;
+     font-weight: 500;
+     border-radius: 2px;
 }

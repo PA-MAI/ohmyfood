@@ -28,7 +28,7 @@ body {
     }
     @mixin pink-button{
         
-        min-height: 60px;
+        min-height: 50px;
         border-radius: 30px 30px 30px 30px;
         background: linear-gradient(180deg, #FF79DA , #9356DC);
         border:0;
@@ -135,8 +135,7 @@ body {
 }
 .hero{
    
-    /*background-clip:padding-box;
-    background-size :cover;*/
+    
     height: 260px;
     img{
         width: 100%;
@@ -167,10 +166,7 @@ body {
                        
   }
 
-@mixin anim-price{
 
-
-}
 .menu{
     display:flex;
     flex-direction: column;
@@ -215,6 +211,7 @@ body {
 
     &__button{
             @include pink-button;
+            padding: 10px 45px 10px 45px;
 
         }
     &__entrees, &__plats, &__desserts{
@@ -229,8 +226,104 @@ body {
                 padding:0;
                 gap:15px;
                 
-                li{
-                    justify-content: space-evenly;
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0;
+                    cursor: pointer;
+                    position: relative;
+                   
+                    .checkbox {
+                      position: relative;
+                      display: flex;
+                      align-items: center;
+                      transition: all 0.8s ease-in-out;
+                      background-color: #99E2D0;
+                      width:70px;
+                      height: 100%;
+                      border-radius: 0 20px 20px 0;
+
+                      input[type="checkbox"] {
+                        
+                        display:none;
+                        position: absolute;
+                        opacity: 0;
+                        width: 30px;
+                        height: 30px;
+                        background-color: white;
+              
+                        &:checked + label {
+                          background-color: white;
+                          border: 0 solid white;
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                          color: var(--tertiary-color);
+                          border-radius: 50px 50px;
+                          width:30px;
+                          height: 30px;
+                          margin-left: 20px;
+                          &::before{
+                            display:none;
+                          }  
+                          &::after {
+                            display: inline-block;
+                            content: "✔";
+                          }
+                        }
+                        label {
+                            display: block;
+                            position: absolute;
+                            width: 30px;
+                            height: 30px;
+                            border: 1px red;
+                            /*border-radius: 50px 50px;*/
+                            background-color: white;
+                            margin-top:18px;
+                            margin-left: 20px;
+                            transition: all 0.8s ease-in-out;
+                          
+                            }
+                           /* &::after {
+                                width: 60px;
+                                height: 50px;
+                                margin-left: 3px;
+                                content: "✔";
+                                color: var(--tertiary-color);
+                          }*/
+                        }
+                  
+                        
+                      }
+                        /*input[type="checkbox"]{
+                        display:none;
+                        }
+                        
+                        label {
+                            display: block;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50px 50px;
+                            background-color: white;
+                            margin-top:22px;
+                            margin-left: 20px;
+                            &:before{
+                                content: " ";
+                                color: white;
+                            }
+                            &:after {
+                                width: 60px;
+                                height: 20px;
+                                margin-left: 3px;
+                                content: "✔";
+                                color: var(--tertiary-color);
+                              }
+                  
+                            }       */
+                   
+
+
 
                     @include menu-card;
                     .card-text{
@@ -240,9 +333,7 @@ body {
                     flex-direction: column;
                     justify-content: space-between;
                     align-items: start;
-                    .checkbox1 {
-                        position: relative;
-                      }
+                    
                     }
 
                     span .card-title{
@@ -266,18 +357,97 @@ body {
                     }
                     .price{
                         width: 10%;
-                        align-items: end;
                         margin: 40px 10px 10px 0;
                         font-size:15px;
                         font-weight: 700;
                         text-wrap: nowrap;
-                        @include anim-price
+                        
                     }
-            }
+                    &:hover .checkbox, &:hover .checkbox label {
+                        transform: translateX(-70px);
+                        }
 
-            }
+                        &:hover .price {
+                            transform: translateX(-70px);
+                        }
+
+      &:hover input[type="checkbox"] {
+        opacity: 1;
+      }
+
+      &:hover input[type="checkbox"]:not(:checked) {
+        opacity: 1;
+      }
+
+      &:hover input[type="checkbox"]:not(:checked) + label {
+        animation: slideIn 0.8s backwards;
+      }
+
+      &:hover input[type="checkbox"]:not(:checked) {
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &:hover input[type="checkbox"] {
+        &:checked + label {
+          animation: slideIn 0.5s backwards ;
+        }
+      }
+
+      &:active input[type="checkbox"] {
+        opacity: 1;
+      }
+
+      &:active input[type="checkbox"]:not(:checked) + label {
+        animation: slideIn 0.5s forwards;
+      }
+
+      &:active input[type="checkbox"]:not(:checked) {
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &:active input[type="checkbox"] {
+        &:checked + label {
+          animation: slideIn 0.5s forwards;
+        }
+      }
+
+      &:hover .checkbox input[type="checkbox"] {
+        opacity: 1;
+        right: 10px;
+        transition: right 0.8s ease-in-out, opacity 0.5s ease-in-out;
+        
+      }
+
+      &:hover .checkbox {
+        right: 10px;
+        transition: right 0.8s ease-in-out, opacity 0.5s ease-in-out;
+
+       
+        
+      }
+    }
+    }
+ }
 }
-}
+
+
+
+  
+  // Slide-in animation for the checkbox
+  @keyframes slideIn {
+    from {
+      right: -70;
+      opacity: 0;
+    }
+    to {
+      right: 70;
+      opacity: 1;
+    }
+  }
 
 /* apparition des entrées */
 @keyframes fade-in-entrees {
@@ -336,6 +506,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 30px;
+   
 }
 /*pied de page*/
 .footer{

@@ -240,39 +240,6 @@ body {
           background-color: white;
           border-radius: 20px;
           box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.08);
-
-          .checkbox {
-            position: absolute;
-            right: -70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 70px;
-            height: 100%;
-            background-color: #99e2d0;
-            border-radius: 0 20px 20px 0;
-            transition: all 0.3s ease-in-out;
-            opacity: 0;
-            &::before {
-              content: "✔";
-              color: var(--tertiary-color);
-            }
-            &::after {
-              content: "✔";
-              color: var(--tertiary-color);
-            }
-            }
-            & + label {
-            display: none;
-            position: absolute;
-            width: 60px;
-            height: 30px;
-            background-color: white;
-            margin-top: 18px;
-            margin-left: 20px;
-            transition: all 0.8s ease-in-out;
-            border: 1px red;
-          }
           .card-text {
             flex: 1;
             overflow: hidden;
@@ -311,6 +278,47 @@ body {
             white-space: nowrap;
             transition: transform 0.3s ease-in-out;
           }
+
+          /*-----------checkbox---------*/
+          .checkbox {
+            
+
+            position: absolute;
+            right: -70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 100%;
+            background-color: var(--tertiary-color);
+            border-radius: 0 20px 20px 0;
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+
+            input[type="checkbox"] {
+              content: url("../Assets/images/logo/ok.svg");
+              appearance: none;
+              -webkit-appearance: none;
+              height:20px;
+              width:20px;
+              font-size: 0.5rem;
+              padding: 3px;
+              background-color: white;
+              border-radius: 50px 50px;
+
+              
+              &::after {
+              content: "\FE0F ";
+              color: var(--tertiary-color);
+              margin-left: 5px;
+              background-color: white;
+              font-size: 0.5rem;
+              border-radius: 50px 50px;
+            }
+          }
+          }
+          
+          
   
           &:hover .price {
             transform: translateX(-55px);
@@ -324,22 +332,19 @@ body {
       }
     }
   }
-  
+  /* apparition de la checkbox */
   @keyframes fade-in {
     from {
       opacity: 0;
+    }
+    50%{ opacity: 0;
+
     }
     to {
       opacity: 1;
     }
   }
-  /*
-  @mixin truncate-text {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-*/
+
 /* apparition des entrées */
 @keyframes fade-in-entrees {
     0% {

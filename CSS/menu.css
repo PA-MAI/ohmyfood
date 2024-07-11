@@ -183,38 +183,7 @@ body {
      background-color: white;
      border-radius: 20px;
      box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.08);
-}
-.menu__entrees--ul li .checkbox, .menu__plats--ul li .checkbox, .menu__desserts--ul li .checkbox {
-     position: absolute;
-     right: -70px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     width: 70px;
-     height: 100%;
-     background-color: #99e2d0;
-     border-radius: 0 20px 20px 0;
-     transition: all 0.3s ease-in-out;
-     opacity: 0;
-}
-.menu__entrees--ul li .checkbox::before, .menu__plats--ul li .checkbox::before, .menu__desserts--ul li .checkbox::before {
-     content: "✔";
-     color: var(--tertiary-color);
-}
-.menu__entrees--ul li .checkbox::after, .menu__plats--ul li .checkbox::after, .menu__desserts--ul li .checkbox::after {
-     content: "✔";
-     color: var(--tertiary-color);
-}
-.menu__entrees--ul li + label, .menu__plats--ul li + label, .menu__desserts--ul li + label {
-     display: none;
-     position: absolute;
-     width: 60px;
-     height: 30px;
-     background-color: white;
-     margin-top: 18px;
-     margin-left: 20px;
-     transition: all 0.8s ease-in-out;
-     border: 1px red;
+     /*-----------checkbox---------*/
 }
 .menu__entrees--ul li .card-text, .menu__plats--ul li .card-text, .menu__desserts--ul li .card-text {
      flex: 1;
@@ -257,6 +226,38 @@ body {
      white-space: nowrap;
      transition: transform 0.3s ease-in-out;
 }
+.menu__entrees--ul li .checkbox, .menu__plats--ul li .checkbox, .menu__desserts--ul li .checkbox {
+     position: absolute;
+     right: -70px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 70px;
+     height: 100%;
+     background-color: var(--tertiary-color);
+     border-radius: 0 20px 20px 0;
+     transition: all 0.3s ease-in-out;
+     opacity: 0;
+}
+.menu__entrees--ul li .checkbox input[type=checkbox], .menu__plats--ul li .checkbox input[type=checkbox], .menu__desserts--ul li .checkbox input[type=checkbox] {
+     content: url("../Assets/images/logo/ok.svg");
+     appearance: none;
+     -webkit-appearance: none;
+     height: 20px;
+     width: 20px;
+     font-size: 0.5rem;
+     padding: 3px;
+     background-color: white;
+     border-radius: 50px 50px;
+}
+.menu__entrees--ul li .checkbox input[type=checkbox]::after, .menu__plats--ul li .checkbox input[type=checkbox]::after, .menu__desserts--ul li .checkbox input[type=checkbox]::after {
+     content: "️";
+     color: var(--tertiary-color);
+     margin-left: 5px;
+     background-color: white;
+     font-size: 0.5rem;
+     border-radius: 50px 50px;
+}
 .menu__entrees--ul li:hover .price, .menu__plats--ul li:hover .price, .menu__desserts--ul li:hover .price {
      transform: translateX(-55px);
 }
@@ -265,21 +266,18 @@ body {
      opacity: 1;
 }
 
+/* apparition de la checkbox */
 @keyframes fade-in {
      from {
+          opacity: 0;
+     }
+     50% {
           opacity: 0;
      }
      to {
           opacity: 1;
      }
 }
-/*
-  @mixin truncate-text {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-*/
 /* apparition des entrées */
 @keyframes fade-in-entrees {
      0% {

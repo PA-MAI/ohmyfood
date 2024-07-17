@@ -1,12 +1,7 @@
 /****** General mobile first***********/
 
 
-/**@mixin title{
-    font-family: "Shrikhand", serif;
-    display: inline-block;
-    margin:0;
-    color: black;
-  }*/
+
 @import "partial/loader.css";
 @import "partial/header.css";
 @import "partial/cards.css";
@@ -51,8 +46,10 @@ $clr-primary: linear-gradient(180deg, #FF79DA , #9356DC);
     left: 0;
     position: relative;
     z-index:1;
+    
     &:hover{
-        animation: opa 400ms ease both;
+        
+        animation: opa 350ms ease-in-out both;
         cursor: pointer;
 
 
@@ -62,18 +59,25 @@ $clr-primary: linear-gradient(180deg, #FF79DA , #9356DC);
         position: absolute;
         box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.22);
         
+        
     }
     &::after {
+        transition:  0.5s;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         opacity: 1;
         content: "";
         position: absolute;
-        z-index: -1;
-        box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.42);
+        z-index: 1;
+        border-radius: 30px;
+        box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.32);
         }
     }
 }
 @keyframes opa{
-from{
+1%{
     opacity: 0.9;
 
 }
@@ -81,7 +85,7 @@ from{
     opacity: 0.8;
 
 }
-to{
+100%{
     opacity: 0.6;
 
 }
@@ -230,6 +234,9 @@ body {
 
 
 /****** General pad ***********/
-
+@media (max-width: 1024px) {
+}
 
 /****** General Desktop***********/
+@media (max-width: 1440px) {
+}

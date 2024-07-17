@@ -16,7 +16,7 @@ body {
         width:100%;
         align-content: center;
     }
-    :root {
+:root {
         --primary-color: #9356DC;
         --secondary-color: #FF79DA;
         --tertiary-color: #99E2D0;
@@ -26,7 +26,7 @@ body {
         --shrikhand-font: "Shrikhand", sans-serif;
     
     }
-    @mixin pink-button{
+@mixin pink-button{
         
         min-height: 50px;
         border-radius: 30px 30px 30px 30px;
@@ -43,7 +43,7 @@ body {
             box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.42);
         }
     }
-    @mixin menu-card{
+@mixin menu-card{
 
         display:flex;
         flex-direction:row;
@@ -55,7 +55,7 @@ body {
         height:72px;
         box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.09);
     }
-    @mixin like {
+@mixin like {
         width: 35px;
         height: 35px;
         input[type="checkbox"] {
@@ -147,7 +147,7 @@ body {
 }
 /* pink like */
 .restaurants__cards-like{
-   
+
     text-align:center;
     margin-top:25px;
     margin-right: 5%;
@@ -163,7 +163,7 @@ body {
     min-width: 0;
     flex: 1;
     max-width: 75%;
-                       
+
   }
 
 
@@ -219,7 +219,7 @@ body {
     &__entrees,
     &__plats,
     &__desserts {
-      opacity: 0; /* Commence par rendre les sections invisibles */
+      opacity: 0; 
       animation: fade-in 0.6s ease forwards; /* Animation de 0.6s, easing et maintien à la fin */
       margin-bottom: 20px;
   
@@ -240,6 +240,7 @@ body {
           background-color: white;
           border-radius: 20px;
           box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.08);
+          overflow: hidden;
           .card-text {
             flex: 1;
             overflow: hidden;
@@ -277,9 +278,10 @@ body {
             font-weight: 700;
             white-space: nowrap;
             transition: transform 0.3s ease-in-out;
+            
           }
 
-          /*-----------checkbox---------*/
+/*-----------checkbox---------*/
           .checkbox {
             
 
@@ -332,16 +334,19 @@ body {
       }
     }
   }
-  /* apparition de la checkbox */
+/* apparition de la checkbox */
   @keyframes fade-in {
     from {
       opacity: 0;
+      z-index: -1;
     }
-    50%{ opacity: 0;
-
+    75%{
+      opacity: 0.3;
+      z-index: 0;
     }
     to {
       opacity: 1;
+      z-index: 1;
     }
   }
 
@@ -351,7 +356,7 @@ body {
         opacity: 0;
         transform: translateY(20px); 
     }
-  
+
     100% {
         opacity: 1;
         transform: translateY(0);

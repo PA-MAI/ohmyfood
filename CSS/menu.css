@@ -162,7 +162,7 @@ body {
      box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.42);
 }
 .menu__entrees, .menu__plats, .menu__desserts {
-     opacity: 0; /* Commence par rendre les sections invisibles */
+     opacity: 0;
      animation: fade-in 0.6s ease forwards; /* Animation de 0.6s, easing et maintien à la fin */
      margin-bottom: 20px;
 }
@@ -183,6 +183,7 @@ body {
      background-color: white;
      border-radius: 20px;
      box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.08);
+     overflow: hidden;
      /*-----------checkbox---------*/
 }
 .menu__entrees--ul li .card-text, .menu__plats--ul li .card-text, .menu__desserts--ul li .card-text {
@@ -270,12 +271,15 @@ body {
 @keyframes fade-in {
      from {
           opacity: 0;
+          z-index: -1;
      }
-     50% {
-          opacity: 0;
+     75% {
+          opacity: 0.3;
+          z-index: 0;
      }
      to {
           opacity: 1;
+          z-index: 1;
      }
 }
 /* apparition des entrées */

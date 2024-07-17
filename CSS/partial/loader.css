@@ -16,7 +16,7 @@ body {
      top: 0;
      left: 0;
      z-index: 9999;
-     animation: fadeOut 2s forwards 2s; /* Fade out après  2s */
+     animation: fadeOut 2s forwards 5s; /* Fade out après  5s */
 }
 
 .button__loader {
@@ -63,7 +63,7 @@ body {
 
 @keyframes button {
      0%, 75% {
-          box-shadow: 0 0 0 16px #9356DC;
+          box-shadow: 0 0 0 2px #9356DC;
           opacity: 0.95;
           animation-delay: 2s;
      }
@@ -78,14 +78,14 @@ body {
           animation-delay: 2s;
      }
      100% {
-          box-shadow: 0 0 0 12px #9356DC;
+          box-shadow: 0 0 0 8px #9356DC;
           opacity: 0.85;
           animation-delay: 2s;
      }
 }
 @keyframes button_ext {
      0%, 75% {
-          box-shadow: 0 0 0 14px #99E2D0;
+          box-shadow: 0 0 0 25px #99E2D0;
           opacity: 1;
      }
      25% {
@@ -93,11 +93,11 @@ body {
           opacity: 0.2;
      }
      50% {
-          box-shadow: 0 0 0 17px #99E2D0;
+          box-shadow: 0 0 0 25px #99E2D0;
           opacity: 0.1;
      }
      100% {
-          box-shadow: 0 0 0 25px #99E2D0;
+          box-shadow: 0 0 0 1px #99E2D0;
           opacity: 0.35;
      }
 }
@@ -112,7 +112,7 @@ body {
 .content {
      opacity: 0;
      visibility: hidden;
-     animation: fadeIn 2s forwards 2s; /* Le contenu apparait après 2s */
+     animation: fadeIn 2s forwards 5s; /* Le contenu apparait après 5s */
 }
 
 @keyframes fadeIn {

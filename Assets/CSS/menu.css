@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*pages de menu*/
-@import "partial/header.css";
+@import "header.css";
 ::before,
 ::after {
   box-sizing: border-box;
@@ -241,9 +241,9 @@ body {
   opacity: 0;
 }
 .menu__entrees--ul li .checkbox input[type=checkbox], .menu__plats--ul li .checkbox input[type=checkbox], .menu__desserts--ul li .checkbox input[type=checkbox] {
-  content: url("../Assets/images/logo/ok.svg");
-  -moz-appearance: none;
-       appearance: none;
+  content: url("../images/logo/ok.svg");
+  color: var(--tertiary-color);
+  appearance: none;
   -webkit-appearance: none;
   height: 20px;
   width: 20px;
@@ -253,7 +253,7 @@ body {
   border-radius: 50px 50px;
 }
 .menu__entrees--ul li .checkbox input[type=checkbox]::after, .menu__plats--ul li .checkbox input[type=checkbox]::after, .menu__desserts--ul li .checkbox input[type=checkbox]::after {
-  content: "️";
+  content: url("../images/logo/ok.svg");
   color: var(--tertiary-color);
   margin-left: 5px;
   background-color: white;
@@ -273,10 +273,6 @@ body {
   from {
     opacity: 0;
     z-index: -1;
-  }
-  75% {
-    opacity: 0.3;
-    z-index: 0;
   }
   to {
     opacity: 1;
@@ -369,4 +365,6 @@ body {
 }
 .footer ul li a img {
   padding-right: 10px;
-}/*# sourceMappingURL=menu.css.map */
+}
+
+/****** General pad and Desktop***********//*# sourceMappingURL=menu.css.map */

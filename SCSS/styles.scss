@@ -1,11 +1,11 @@
-/****** General mobile first***********/
+
+/****** variables et mixins***********/
 
 
+@import "loader.css";
+@import "header.css";
+@import "cards.css";
 
-@import "partial/loader.css";
-@import "partial/header.css";
-@import "partial/cards.css";
-/*@import "partial/location.css";*/
 
 * {
 	font-family: 'Roboto', sans-serif;
@@ -30,7 +30,7 @@
 $clr-primary: linear-gradient(180deg, #FF79DA , #9356DC);
 @mixin pink-button{
     
-    min-height: 60px;
+    min-height: 50px;
     border-radius: 30px;
     background:$clr-primary;
     border:0;
@@ -49,12 +49,12 @@ $clr-primary: linear-gradient(180deg, #FF79DA , #9356DC);
     
     &:hover{
         
-        animation: opa 350ms ease-in-out both;
+        
         cursor: pointer;
 
 
     &::before {
-        opacity: 0.5;
+        animation: opa 350ms ease-in-out both;
         content: "";
         position: absolute;
         box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.22);
@@ -62,7 +62,8 @@ $clr-primary: linear-gradient(180deg, #FF79DA , #9356DC);
         
     }
     &::after {
-        transition:  0.5s;
+        
+        animation: opa 350ms ease-in-out both;
         top: 0;
         right: 0;
         bottom: 0;
@@ -78,13 +79,10 @@ $clr-primary: linear-gradient(180deg, #FF79DA , #9356DC);
 }
 @keyframes opa{
 1%{
-    opacity: 0.9;
+    opacity: 1;
 
 }
-50%{
-    opacity: 0.8;
 
-}
 100%{
     opacity: 0.6;
 
@@ -95,9 +93,11 @@ $clr-primary: linear-gradient(180deg, #FF79DA , #9356DC);
 
 
 
-@mixin h1-mob {
+@mixin h1-txt {
     text-align: center;
-    font-size: 1.5rem;
+    margin-right: 15%;
+    margin-left:15%;
+    margin-top: 39px;
 }
 
 @mixin function-circle {
@@ -107,12 +107,13 @@ $clr-primary: linear-gradient(180deg, #FF79DA , #9356DC);
                 background-color:#9356DC;
                 border-radius: 20px;
                 color: white;
-                position:inherit;
-                margin: 3px 5px 0 -10px;
+                margin: 0px 0px 0 -10px;
                 padding: 3px 2px 3px 7px;
                 font-size:14px;
 
 }
+/****** General mobile first***********/
+/*@media screen and (max-width: 768px) {*/
 body {
 	display: flex;
 	flex-direction: column;
@@ -135,10 +136,8 @@ body {
         background-color:var(--grey-button) ;
         box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.22) inset;
         h1{
-            @include h1-mob;
-            margin-right: 15%;
-            margin-left:15%;
-            margin-top: 39px;
+            @include h1-txt;
+            font-size: 1.5rem;
         }
         h2{
             margin-right: 7%;
@@ -233,10 +232,98 @@ body {
 
 
 
-/****** General pad ***********/
-@media (max-width: 1024px) {
+/****** General pad and Desktop***********/
+@media screen and (min-width: 768px) {
+    body {
+        
+        
+        max-width: none;
+        margin:0;
+        align-content: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+.explore{
+    
+    &__title{
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        margin-bottom: 35px;
+        align-content: center;
+    }
+    
+    &__title-h1{
+        width: 100%;
+        h1{
+            font-size: 40px;
+            text-shadow: 0 5px 2px rgba(0, 0, 0, 0.12);
+        }
+    }
+    &__title-h2{
+        width: 100%;
+    }
+    &__function{
+        width: 100%;
+        max-width: 100%;
+        align-self: center;
+        & h2{
+            margin-left:10%;
+        }
+        &--ul{
+        flex-direction: row;
+        justify-content: center;
+        gap:3%;
+        margin:0 7% 0 7%;
+        & li {
+            min-width: 30%;
+            max-width: 290px;
+         }
+         & i{
+            padding-left: 2%  !important;
+            padding-right: 2% !important;
+         }
+        }
+    }
+}
+.restaurants{
+    & h2{
+margin-left: 10%;
+    }
+    &__art{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap:5%;
+    }
+    &__cards{
+        width:40%;
+        margin-bottom: 40px;
+    }
+}
+.footer{
+    display:flex;
+    justify-content:end;
+    flex-direction: row-reverse;
+    align-content: end;
+    &__logo{
+        margin-top: 18px;
+    }
+    & ul{
+        display: flex;
+        flex-direction: row;
+        justify-content:end;
+        margin-right:20px ;
+        align-content: end;
+        margin-bottom: 0;
+        li a {
+        margin-right: 20px;
+        }
+    }
 }
 
-/****** General Desktop***********/
-@media (max-width: 1440px) {
+
+
+
 }

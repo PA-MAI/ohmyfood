@@ -1,296 +1,277 @@
-
 /****** variables et mixins***********/
-
 
 @import "loader.css";
 @import "header.css";
 @import "cards.css";
 
-
 * {
-	font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 ::before,
 ::after {
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-	--primary-color: #9356DC;
-	--secondary-color: #FF79DA;
-	--tertiary-color: #99E2D0;
-    --grey-button:rgba(246, 246, 246, 1);
-    --green-text:#008766;
-    font-family: 'Roboto', sans-serif;
-    --shrikhand-font: "Shrikhand", sans-serif;
-
+  --primary-color: #9356dc;
+  --secondary-color: #ff79da;
+  --tertiary-color: #99e2d0;
+  --grey-button: rgba(246, 246, 246, 1);
+  --green-text: #008766;
+  font-family: "Roboto", sans-serif;
+  --shrikhand-font: "Shrikhand", sans-serif;
 }
 
-@mixin pink-button{
-    
-    min-height: 50px;
-    border-radius: 30px 30px 30px 30px;
-    background: linear-gradient(180deg, #FF79DA , #9356DC);
-    border:0;
-    color: white;
-    padding: 0 25px 0 25px;
-    margin-bottom: 55px;
-    font-size:large;
-    font-weight:500;
-    box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.22);
-    transition: all 2s ease-out;
-    -webkit-transition: all 0.3s ease-out 0s; 
-    
-    &:hover{
-      cursor: pointer;
-        opacity: 0.7;
-        box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.42);
-        transition: all 2s ease-in;
-        -webkit-transition: all 0.3s ease-in 0s; 
-    }
+@mixin pink-button {
+  min-height: 50px;
+  border-radius: 30px 30px 30px 30px;
+  background: linear-gradient(180deg, #ff79da, #9356dc);
+  border: 0;
+  color: white;
+  padding: 0 25px 0 25px;
+  margin-bottom: 55px;
+  font-size: large;
+  font-weight: 500;
+  box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.22);
+  transition: all 2s ease-out;
+  -webkit-transition: all 0.3s ease-out 0s;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.42);
+    transition: all 2s ease-in;
+    -webkit-transition: all 0.3s ease-in 0s;
+  }
 }
-
-
 
 @mixin h1-txt {
-    text-align: center;
-    margin-right: 15%;
-    margin-left:15%;
-    margin-top: 39px;
+  text-align: center;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 39px;
 }
 
 @mixin function-circle {
-                width:15px;
-                height: 15px;
-                display: inline-block;
-                background-color:#9356DC;
-                border-radius: 20px;
-                color: white;
-                margin: 0px 0px 0 -10px;
-                padding: 3px 2px 3px 7px;
-                font-size:14px;
-
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-color: #9356dc;
+  border-radius: 20px;
+  color: white;
+  margin: 0px 0px 0 -10px;
+  padding: 3px 2px 3px 7px;
+  font-size: 14px;
 }
 /****** General mobile first***********/
 /*@media screen and (max-width: 768px) {*/
 body {
-	display: flex;
-	flex-direction: column;
-	max-width: 767.98px;
-    margin:0;
-    width:100%;
-    align-content: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 767.98px;
+  margin: 0;
+  width: 100%;
+  align-content: center;
 }
 
 .explore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 35px;
+
+  &__title {
     display: flex;
-    flex-direction:column;
-    justify-content: center;
-    margin-bottom: 35px;
-
-    &__title {
-        display: flex;
-        flex-direction:column;
-        align-items: center;
-        background-color:var(--grey-button) ;
-        box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.22) inset;
-        h1{
-            @include h1-txt;
-            font-size: 1.5rem;
-        }
-        h2{
-            margin-right: 7%;
-            margin-left:7%;
-            margin-top: 0;
-            font-weight: 300;
-            font-size:18px;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .button{
-            @include pink-button;
-        }   
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--grey-button);
+    box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.22) inset;
+    h1 {
+      @include h1-txt;
+      font-size: 1.5rem;
     }
-        &__function{
-            background-color: white;
-            
-            & h2 {
-                margin-left:20px;
-                
-            }
-            &--ul{
-            display:flex;
-            flex-direction:column;
-            justify-content:space-evenly;
-            align-items: center;
-            align-content: center;
-            list-style-type: none;
-            margin:0px 25px 0 35px;
-            padding-left: 0;
-            gap:25px;
-            
-            & li{
-                height: 72px;
-                min-width: 290px;
-                max-width: 400px;
-                background-color:var(--grey-button) ;
-                text-align: left;
-                border-radius: 20px 20px 20px 20px;
-                align-content: center;
-                box-shadow:   0px 5px 5px 2px rgba(0, 0, 0, 0.12);
-                font-size:medium;
-                font-weight:500;
-            & i{
-                padding-right:7%;
-                color :grey;
-                padding-left:20px;
-            }
-            & .circle{
-            @include function-circle;
+    h2 {
+      margin-right: 7%;
+      margin-left: 7%;
+      margin-top: 0;
+      font-weight: 300;
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .button {
+      @include pink-button;
+    }
+  }
+  &__function {
+    background-color: white;
 
-            }
-            & .fa-store{
-                color:#9356DC;
-            }    
+    & h2 {
+      margin-left: 20px;
+    }
+    &--ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      align-content: center;
+      list-style-type: none;
+      margin: 0px 25px 0 35px;
+      padding-left: 0;
+      gap: 25px;
 
-            }
+      & li {
+        height: 72px;
+        min-width: 290px;
+        max-width: 400px;
+        background-color: var(--grey-button);
+        text-align: left;
+        border-radius: 20px 20px 20px 20px;
+        align-content: center;
+        box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.12);
+        font-size: medium;
+        font-weight: 500;
+        & i {
+          padding-right: 7%;
+          color: grey;
+          padding-left: 20px;
         }
+        & .circle {
+          @include function-circle;
         }
-    }
-    .footer{
-    background-color:#353535;
-    color: white;
-    font-family: var(--shrikhand-font);
-    padding:22px 25px 22px 25px;
-    :visited{ color:white;}
-    :link{ color:white;
-            text-decoration: none;}
-    & ul{
-        padding: 0;
-
-    }
-    &__logo{
-        height:20px;
-    }
-
-    & ul li{
-        list-style-type: none;
-        color: white;
-    }
-    & ul li a{
-        font-family: 'Roboto', sans-serif;
-
-        color: white;
-        & img{
-            padding-right:10px;
+        & .fa-store {
+          color: #9356dc;
         }
-      
-    }    
-
+      }
+    }
+  }
 }
+.footer {
+  background-color: #353535;
+  color: white;
+  font-family: var(--shrikhand-font);
+  padding: 22px 25px 22px 25px;
+  :visited {
+    color: white;
+  }
+  :link {
+    color: white;
+    text-decoration: none;
+  }
+  & ul {
+    padding: 0;
+  }
+  &__logo {
+    height: 20px;
+  }
 
+  & ul li {
+    list-style-type: none;
+    color: white;
+  }
+  & ul li a {
+    font-family: "Roboto", sans-serif;
 
+    color: white;
+    & img {
+      padding-right: 10px;
+    }
+  }
+}
 
 /****** General pad and Desktop***********/
 @media screen and (min-width: 768px) {
-    body {
-        
-        
-        max-width: none;
-        margin:0;
-        align-content: center;
-        width: 100vw;
-        height: 100vh;
+  body {
+    max-width: none;
+    margin: 0;
+    align-content: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .header {
+    &__location {
+      box-shadow: none;
     }
-.header{
-    &__location{
-        box-shadow:none;
-    }
-}    
+  }
 
-.explore{
-    
-    &__title{
-        display: flex;
-        flex-direction:column;
-        justify-content: center;
-        margin-bottom: 35px;
-        align-content: center;
-        box-shadow:none;
+  .explore {
+    &__title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 35px;
+      align-content: center;
+      box-shadow: none;
     }
-    
-    &__title-h1{
-        width: 100%;
-        h1{
-            font-size: 40px;
-            text-shadow: 0 5px 2px rgba(0, 0, 0, 0.12);
-        }
+
+    &__title-h1 {
+      width: 100%;
+      h1 {
+        font-size: 40px;
+        text-shadow: 0 5px 2px rgba(0, 0, 0, 0.12);
+      }
     }
-    &__title-h2{
-        width: 100%;
+    &__title-h2 {
+      width: 100%;
     }
-    &__function{
-        width: 100%;
-        max-width: 100%;
-        align-self: center;
-        & h2{
-            margin-left:10%;
-        }
-        &--ul{
+    &__function {
+      width: 100%;
+      max-width: 100%;
+      align-self: center;
+      & h2 {
+        margin-left: 10%;
+      }
+      &--ul {
         flex-direction: row;
         justify-content: center;
-        gap:3%;
-        margin:0 10% 0 9%;
+        gap: 3%;
+        margin: 0 10% 0 9%;
         & li {
-            min-width: 30%;
-            max-width: 290px;
-         }
-         & i{
-            padding-left: 2%  !important;
-            padding-right: 2% !important;
-         }
+          min-width: 30%;
+          max-width: 290px;
         }
+        & i {
+          padding-left: 2% !important;
+          padding-right: 2% !important;
+        }
+      }
     }
-}
-.restaurants{
-    & h2{
-margin-left: 10%;
+  }
+  .restaurants {
+    & h2 {
+      margin-left: 10%;
     }
-    &__art{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap:5%;
+    &__art {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5%;
     }
-    &__cards{
-        width:40%;
-        margin-bottom: 40px;
+    &__cards {
+      width: 40%;
+      margin-bottom: 40px;
     }
-}
-.footer{
-    display:flex;
-    justify-content:end;
+  }
+  .footer {
+    display: flex;
+    justify-content: end;
     flex-direction: row-reverse;
     align-content: end;
-    &__logo{
-        margin-top: 18px;
+    &__logo {
+      margin-top: 18px;
     }
-    & ul{
-        display: flex;
-        flex-direction: row;
-        justify-content:end;
-        margin-right:20px ;
-        align-content: end;
-        margin-bottom: 0;
-        li a {
+    & ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      margin-right: 20px;
+      align-content: end;
+      margin-bottom: 0;
+      li a {
         margin-right: 20px;
-        }
+      }
     }
-}
-
-
-
-
+  }
 }

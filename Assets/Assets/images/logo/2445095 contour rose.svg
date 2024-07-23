@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.0"
+   width="1280.000000pt"
+   height="1280.000000pt"
+   viewBox="0 0 1280.000000 1280.000000"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg1"
+   sodipodi:docname="2445095 contour rose.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient5"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#9356dc;stop-opacity:1;"
+         offset="0"
+         id="stop4" />
+      <stop
+         style="stop-color:#ff79da;stop-opacity:1;"
+         offset="1"
+         id="stop5" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 640 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1280 : 640 : 1"
+       inkscape:persp3d-origin="640 : 426.66667 : 1"
+       id="perspective3" />
+    <linearGradient
+       id="linearGradient2"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2"
+       id="linearGradient3"
+       x1="6410.416"
+       y1="3702.0867"
+       x2="6400.6528"
+       y2="9020.9521"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5"
+       id="linearGradient4"
+       gradientUnits="userSpaceOnUse"
+       x1="6394.2944"
+       y1="3720.3501"
+       x2="6416.6152"
+       y2="7344.5835" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="0.69199219"
+     inkscape:cx="852.61078"
+     inkscape:cy="853.33333"
+     inkscape:window-width="2560"
+     inkscape:window-height="1377"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <metadata
+     id="metadata1">
+Created by potrace 1.15, written by Peter Selinger 2001-2017
+</metadata>
+  <g
+     transform="matrix(0.14567095,0,0,-0.15221649,-281.16663,1600.2699)"
+     fill="#000000"
+     stroke="none"
+     id="g1"
+     style="fill:url(#linearGradient3);fill-opacity:1">
+    <path
+       d="m 5140,9029 c -714,-52 -1333,-554 -1531,-1241 -56,-195 -64,-255 -63,-498 0,-195 3,-239 23,-330 65,-306 192,-569 383,-795 42,-49 610,-623 1262,-1275 L 6400,3705 7624,4930 c 778,779 1245,1254 1283,1305 159,214 260,432 317,686 104,470 9,962 -264,1363 -80,118 -217,268 -324,355 -485,396 -1138,504 -1724,285 -163,-61 -292,-132 -439,-242 l -72,-54 -43,35 c -185,150 -474,284 -728,337 -80,16 -341,43 -375,39 -5,-1 -57,-5 -115,-10 z m 460,-302 c 276,-65 499,-186 712,-387 l 93,-87 97,93 c 207,198 440,323 718,386 91,20 132,23 305,23 223,0 292,-10 474,-71 428,-142 773,-487 915,-914 54,-164 67,-239 73,-425 4,-143 2,-189 -15,-290 -37,-215 -111,-402 -233,-586 -55,-83 -193,-226 -1200,-1234 L 6400,4095 5289,5205 c -787,787 -1131,1138 -1182,1205 -151,198 -247,434 -282,690 -108,788 433,1516 1222,1645 138,23 418,13 553,-18 z"
+       id="path1"
+       style="fill:url(#linearGradient4);fill-opacity:1;fill-rule:evenodd" />
+  </g>
+</svg>

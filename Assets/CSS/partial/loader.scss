@@ -1,0 +1,127 @@
+$anim-dur: 2s;
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .loader__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: silver;
+            position: fixed; /* Fixed position to overlay on top */
+            top: 0;
+            left: 0;
+            z-index: 9999; /* Ensure it's above everything */
+            animation: fadeOut 2s forwards 2s; /* Fade out after 5s */
+        }
+
+        .button__loader {
+            box-shadow: 0 0 0 15px black;
+            animation: button 2s ease-in-out infinite;
+            font-family: "Shrikhand", serif;
+            display: inline-block;
+            margin: 20px;
+            font-size: 20px;
+            border-radius: 55px;
+            color: black;
+            width: 100%;
+            min-width: 280px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            background-color: #FF79DA;
+            padding: 10px;
+        }
+
+        .button__loader:hover {
+            animation-play-state: paused;
+        }
+
+        .button__loaderext {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            box-shadow: 0 0 0 5px #99E2D0;
+            animation: button_ext 3s ease-in-out infinite;
+            border-radius: 55px;
+            width: 310px;
+            height: 80px;
+            text-align: center;
+            line-height: 30px;
+            padding: 15px;
+        }
+
+        .button__loaderext:hover {
+            animation-play-state: running;
+        }
+
+        @keyframes button {
+            0%, 75% {
+                box-shadow: 0 0 0 16px #9356DC;
+                opacity: 0.95;
+                animation-delay: $anim-dur;
+            }
+            25% {
+                box-shadow: 0 0 0 11px #9356DC;
+                opacity: 0.85;
+                animation-delay: $anim-dur;
+            }
+            50% {
+                box-shadow: 0 0 0 17px #9356DC;
+                opacity: 0.95;
+                animation-delay: $anim-dur;
+            }
+            100% {
+                box-shadow: 0 0 0 12px #9356DC;
+                opacity: 0.85;
+                animation-delay: $anim-dur;
+            }
+        }
+
+        @keyframes button_ext {
+            0%, 75% {
+                box-shadow: 0 0 0 14px #99E2D0;
+                opacity: 1;
+            }
+            25% {
+                box-shadow: 0 0 0 1px #99E2D0;
+                opacity: 0.2;
+            }
+            50% {
+                box-shadow: 0 0 0 17px #99E2D0;
+                opacity: 0.1;
+            }
+            100% {
+                box-shadow: 0 0 0 25px #99E2D0;
+                opacity: 0.35;
+            }
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                visibility: hidden;
+                display: none; 
+            }
+        }
+
+        /* Styles pour le contenu principal */
+        .content {
+            opacity: 0;
+            visibility: hidden;
+            animation: fadeIn 2s forwards 2s; /* Le contenu apparait après 2s */
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                visibility: visible;
+            }
+        }

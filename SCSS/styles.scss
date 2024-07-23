@@ -66,7 +66,7 @@
   font-size: 14px;
 }
 /****** General mobile first***********/
-/*@media screen and (max-width: 768px) {*/
+
 body {
   display: flex;
   flex-direction: column;
@@ -181,8 +181,18 @@ body {
   }
 }
 
-/****** General pad and Desktop***********/
+
+/****** General Pad and Desktop***********/
 @media screen and (min-width: 768px) {
+  @media screen and (max-width: 1024px) {
+    .explore{
+      &__function{
+        &--ul{
+          margin: 0 4% 0 4% !important;
+        }
+      }
+    }
+    }
   body {
     max-width: none;
     margin: 0;

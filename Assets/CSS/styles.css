@@ -2,6 +2,7 @@
 @import "loader.css";
 @import "header.css";
 @import "cards.css";
+@import "mixin-com.css";
 * {
   font-family: "Roboto", sans-serif;
 }

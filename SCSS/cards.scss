@@ -1,46 +1,5 @@
+@import "mixin-com.css";
 
-@mixin like {
-	width: 35px;
-	height: 35px;
-	input[type="checkbox"] {
-		display: none;
-	
-		&:checked ~ .heart-label {
-		  .restaurants__cards-like--unchecked {
-			opacity: 0;
-		  }
-	
-		  .restaurants__cards-like--checked {
-			opacity: 1;
-		  }
-		}
-	  }
-	
-	  .heart-label {
-		display: block;
-		position: relative;
-	
-		img {
-			  width: 40px;
-			  height: 40px;
-			  position: absolute;
-			  margin-top: 90%;
-			  left: 20%;
-			  right: 30%;
-			  transform: translate(-50%, -50%);
-			  transition: opacity 0.3s ease;
-			
-		}
-
-		.restaurants__cards-like--unchecked {
-		  opacity: 1;
-		}
-
-		.restaurants__cards-like--checked {
-		  opacity: 0;
-		}
-	  }
-}
 
 .restaurants{
     display: flex;

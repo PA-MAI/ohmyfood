@@ -1,0 +1,64 @@
+@mixin pink-button {
+    min-height: 50px;
+    border-radius: 30px 30px 30px 30px;
+    background: linear-gradient(180deg, #ff79da, #9356dc);
+    border: 0;
+    color: white;
+    padding: 0 25px 0 25px;
+    margin-bottom: 55px;
+    font-size: large;
+    font-weight: 500;
+    box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.22);
+    transition: all 2s ease-out;
+    -webkit-transition: all 0.3s ease-out 0s;
+  
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+      box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.42);
+      transition: all 2s ease-in;
+      -webkit-transition: all 0.3s ease-in 0s;
+    }
+  }
+  @mixin like {
+	width: 35px;
+	height: 35px;
+	input[type="checkbox"] {
+		display: none;
+	
+		&:checked ~ .heart-label {
+		  .restaurants__cards-like--unchecked {
+			opacity: 0;
+		  }
+	
+		  .restaurants__cards-like--checked {
+			opacity: 1;
+		  }
+		}
+	  }
+	
+	  .heart-label {
+		display: block;
+		position: relative;
+	
+		img {
+			  width: 40px;
+			  height: 40px;
+			  position: absolute;
+			  margin-top: 90%;
+			  left: 20%;
+			  right: 30%;
+			  transform: translate(-50%, -50%);
+			  transition: opacity 0.3s ease;
+			
+		}
+
+		.restaurants__cards-like--unchecked {
+		  opacity: 1;
+		}
+
+		.restaurants__cards-like--checked {
+		  opacity: 0;
+		}
+	  }
+}

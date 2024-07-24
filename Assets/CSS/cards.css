@@ -1,3 +1,4 @@
+@import "mixin-com.css";
 .restaurants {
   display: flex;
   flex-direction: column;

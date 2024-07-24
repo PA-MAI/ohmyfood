@@ -68,11 +68,14 @@
 				grid-column: 2 / 2;
 				grid-row: 1 / 2;
 				text-align:center;
-				margin-top:5px;
+				
 				position: relative;
 				display: inline-block;
 				@include like;
-
+				.heart-label img{
+					margin-top: 40% !important;
+				}
+				
 			}
 
 }
@@ -80,7 +83,7 @@
 	height: 170px;
 
 }
-/* encarts "nouveau" */
+/* etiquette "nouveau" */
 .new-badge {
 				position:relative;
 				height: 18px;

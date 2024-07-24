@@ -27,6 +27,27 @@ body {
   --shrikhand-font: "Shrikhand", sans-serif;
 }
 
+.heart-label {
+  display: block;
+  position: relative;
+}
+.heart-label img {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  margin-top: 50%;
+  left: 20%;
+  right: 30%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+.heart-label .restaurants__cards-like--unchecked {
+  opacity: 1;
+}
+.heart-label .restaurants__cards-like--checked {
+  opacity: 0;
+}
+
 .header {
   justify-content: space-between;
 }
@@ -89,26 +110,6 @@ body {
 }
 .restaurants__cards-like input[type=checkbox]:checked ~ .heart-label .restaurants__cards-like--checked {
   opacity: 1;
-}
-.restaurants__cards-like .heart-label {
-  display: block;
-  position: relative;
-}
-.restaurants__cards-like .heart-label img {
-  width: 35px;
-  height: 35px;
-  position: absolute;
-  margin-top: 50%;
-  left: 20%;
-  right: 30%;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.3s ease;
-}
-.restaurants__cards-like .heart-label .restaurants__cards-like--unchecked {
-  opacity: 1;
-}
-.restaurants__cards-like .heart-label .restaurants__cards-like--checked {
-  opacity: 0;
 }
 
 .menu {
@@ -363,6 +364,7 @@ body {
 }
 .footer__logo {
   height: 20px;
+  margin-top: 15px !important;
 }
 .footer ul li {
   list-style-type: none;
@@ -376,8 +378,7 @@ body {
   padding-right: 10px;
 }
 
-/****** General pad ***********/
-/****** General Desktop***********/
+/****** General pad and Desktop***********/
 @media screen and (min-width: 768px) {
   body {
     max-width: none;
@@ -415,25 +416,25 @@ body {
   .menu article {
     margin: 0 20% 0 20%;
   }
-}
-.footer {
-  display: flex;
-  justify-content: end;
-  flex-direction: row-reverse;
-  align-content: end;
-}
-.footer__logo {
-  margin-top: 18px;
-  margin-right: 3%;
-}
-.footer ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  margin-right: 3%;
-  align-content: end;
-  margin-bottom: 0;
-}
-.footer ul li a {
-  margin-right: 20px;
+  .footer {
+    display: flex;
+    justify-content: end;
+    flex-direction: row-reverse;
+    align-content: end;
+  }
+  .footer__logo {
+    margin-top: 18px;
+    margin-right: 3%;
+  }
+  .footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-right: 3%;
+    align-content: end;
+    margin-bottom: 0;
+  }
+  .footer ul li a {
+    margin-right: 20px;
+  }
 }/*# sourceMappingURL=menu.css.map */

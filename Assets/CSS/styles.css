@@ -168,6 +168,18 @@ body {
   .explore__function--ul {
     margin: 0 4% 0 4% !important;
   }
+  .explore__function--ul i {
+    padding: 0 2% 0 2% !important;
+  }
+  .explore__function h2 {
+    margin-left: 6% !important;
+  }
+  .restaurants h2 {
+    margin-left: 6% !important;
+  }
+  .restaurants__art {
+    margin: 20px 0 0 0 !important;
+  }
 }
 @media screen and (min-width: 768px) {
   body {
@@ -217,8 +229,8 @@ body {
     max-width: 290px;
   }
   .explore__function--ul i {
-    padding-left: 2% !important;
-    padding-right: 2% !important;
+    padding-left: 10%;
+    padding-right: 10%;
   }
   .restaurants h2 {
     margin-left: 10%;
@@ -227,7 +239,8 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5%;
+    gap: 8%;
+    margin: 20px 4.5% 0 4.5%;
   }
   .restaurants__cards {
     width: 40%;
@@ -240,7 +253,8 @@ body {
     align-content: end;
   }
   .footer__logo {
-    margin-top: 18px;
+    margin-top: 15px;
+    margin-right: 3%;
   }
   .footer ul {
     display: flex;

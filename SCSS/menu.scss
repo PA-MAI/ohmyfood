@@ -74,8 +74,9 @@ body {
       }
     }
   }
+}
 
-  .heart-label {
+.heart-label {
     display: block;
     position: relative;
 
@@ -97,8 +98,8 @@ body {
     .restaurants__cards-like--checked {
       opacity: 0;
     }
-  }
 }
+
 .header {
   :visited {
     color: black;
@@ -396,6 +397,7 @@ body {
 }
 /*pied de page*/
 .footer {
+
   background-color: #353535;
   color: white;
   font-family: var(--shrikhand-font);
@@ -412,6 +414,8 @@ body {
   }
   &__logo {
     height: 20px;
+    margin-top: 15px !important;
+    
   }
 
   & ul li {
@@ -427,9 +431,9 @@ body {
     }
   }
 }
-/****** General pad ***********/
 
-/****** General Desktop***********/
+
+/****** General pad and Desktop***********/
 @media screen and (min-width: 768px) {
   body {
     max-width: none;
@@ -468,7 +472,7 @@ body {
       margin: 0 20% 0 20%;
     }
   }
-}
+
 .footer {
   display: flex;
   justify-content: end;
@@ -489,4 +493,5 @@ body {
       margin-right: 20px;
     }
   }
+}
 }

@@ -149,6 +149,7 @@ body {
   }
 }
 .footer {
+  
   background-color: #353535;
   color: white;
   font-family: var(--shrikhand-font);
@@ -189,10 +190,24 @@ body {
       &__function{
         &--ul{
           margin: 0 4% 0 4% !important;
+          & i{
+            padding: 0 2% 0 2% !important;
+          }
+        }
+        h2{
+          margin-left:6% !important;
         }
       }
     }
+    .restaurants{
+      h2{
+        margin-left:6% !important;
+      }
+      &__art{
+      margin: 20px 0 0 0 !important;
     }
+    }
+  }
   body {
     max-width: none;
     margin: 0;
@@ -243,21 +258,22 @@ body {
           max-width: 290px;
         }
         & i {
-          padding-left: 2% !important;
-          padding-right: 2% !important;
+          padding-left: 10% ;
+          padding-right: 10% ;
         }
       }
     }
   }
   .restaurants {
     & h2 {
-      margin-left: 10%;
+      margin-left:10%;
     }
     &__art {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 5%;
+      gap: 8%;
+      margin: 20px 4.5% 0 4.5%;
     }
     &__cards {
       width: 40%;
@@ -270,7 +286,8 @@ body {
     flex-direction: row-reverse;
     align-content: end;
     &__logo {
-      margin-top: 18px;
+      margin-top: 15px;
+      margin-right: 3%;
     }
     & ul {
       display: flex;

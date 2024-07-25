@@ -4,5 +4,6 @@
         "ohmyfood"
     ],
     "Scss2css.output": "expanded",
-    "Scss2css.indentWidth": 5
+    "Scss2css.indentWidth": 5,
+    "cSpell.language": "en"
 }

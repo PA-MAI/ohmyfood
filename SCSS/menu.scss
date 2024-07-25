@@ -384,6 +384,16 @@ d
 
 /****** General pad and Desktop***********/
 @media screen and (min-width: 768px) {
+  @media screen and (max-width: 1024px) {
+    .menu{
+      article{
+        margin: 0 10% 0 10% !important;
+      }
+    }
+
+
+
+  }
   body {
     max-width: none;
     margin: 0;

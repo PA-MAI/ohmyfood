@@ -382,6 +382,11 @@ d .menu__desserts {
 }
 
 /****** General pad and Desktop***********/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .menu article {
+    margin: 0 10% 0 10% !important;
+  }
+}
 @media screen and (min-width: 768px) {
   body {
     max-width: none;

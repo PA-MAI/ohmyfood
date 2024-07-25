@@ -40,27 +40,13 @@ body {
 
 
 .heart-label {
-    display: block;
-    position: relative;
 
     img {
-      width: 35px;
-      height: 35px;
-      position: absolute;
-      margin-top: 50%;
-      left: 20%;
-      right: 30%;
-      transform: translate(-50%, -50%);
-      transition: opacity 0.3s ease;
+
+      margin-top: 30%;
+
     }
 
-    .restaurants__cards-like--unchecked {
-      opacity: 1;
-    }
-
-    .restaurants__cards-like--checked {
-      opacity: 0;
-    }
 }
 
 .header {
@@ -110,7 +96,7 @@ body {
 /* pink like */
 .restaurants__cards-like {
   text-align: center;
-  margin-top: 25px;
+  margin-top: 20px;
   margin-right: 5%;
   position: relative;
   display: inline-block;

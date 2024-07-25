@@ -16,7 +16,7 @@ body {
   top: 0;
   left: 0;
   z-index: 9999;
-  animation: fadeOut 2s forwards 5s; /* Fade out après  5s */
+  animation: fadeOut 3s forwards 3s; /* Fade out après  3s */
 }
 
 .button__loader {
@@ -112,7 +112,7 @@ body {
 .content {
   opacity: 0;
   visibility: hidden;
-  animation: fadeIn 2s forwards 5s; /* Le contenu apparait après 5s */
+  animation: fadeIn 2s forwards 3s; /* Le contenu apparait après 3s */
 }
 
 @keyframes fadeIn {

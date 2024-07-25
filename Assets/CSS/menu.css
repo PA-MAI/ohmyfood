@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*pages de menu*/
 @import "header.css";
+@import "mixin-com.css";
 ::before,
 ::after {
   box-sizing: border-box;
@@ -27,42 +28,8 @@ body {
   --shrikhand-font: "Shrikhand", sans-serif;
 }
 
-/*@mixin like {
-  width: 35px;
-  height: 35px;
-  input[type="checkbox"] {
-    display: none;
-
-    &:checked ~ .heart-label {
-      .restaurants__cards-like--unchecked {
-        opacity: 0;
-      }
-
-      .restaurants__cards-like--checked {
-        opacity: 1;
-      }
-    }
-  }
-}*/
-.heart-label {
-  display: block;
-  position: relative;
-}
 .heart-label img {
-  width: 35px;
-  height: 35px;
-  position: absolute;
-  margin-top: 50%;
-  left: 20%;
-  right: 30%;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.3s ease;
-}
-.heart-label .restaurants__cards-like--unchecked {
-  opacity: 1;
-}
-.heart-label .restaurants__cards-like--checked {
-  opacity: 0;
+  margin-top: 50% !important;
 }
 
 .header {
@@ -112,7 +79,7 @@ body {
 /* pink like */
 .restaurants__cards-like {
   text-align: center;
-  margin-top: 25px;
+  margin-top: 20px;
   margin-right: 5%;
   position: relative;
   display: inline-block;
@@ -369,7 +336,7 @@ body {
   animation-delay: 1s;
 }
 
-.menu__desserts {
+d .menu__desserts {
   animation-name: fade-in-desserts;
   animation-delay: 1.5s;
 }

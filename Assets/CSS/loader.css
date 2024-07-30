@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   display: flex;
   flex-direction: column;
@@ -16,7 +15,7 @@ body {
   top: 0;
   left: 0;
   z-index: 9999;
-  animation: fadeOut 3s forwards 3s; /* Fade out après  3s */
+  animation: fadeOut 3s forwards 3s; /* Fade out after  3s */
 }
 
 .button__loader {
@@ -65,22 +64,22 @@ body {
   0%, 75% {
     box-shadow: 0 0 0 2px #9356DC;
     opacity: 0.95;
-    animation-delay: 2s;
+    animation-delay: 1s;
   }
   25% {
     box-shadow: 0 0 0 11px #9356DC;
     opacity: 0.85;
-    animation-delay: 2s;
+    animation-delay: 1s;
   }
   50% {
     box-shadow: 0 0 0 17px #9356DC;
     opacity: 0.95;
-    animation-delay: 2s;
+    animation-delay: 1s;
   }
   100% {
     box-shadow: 0 0 0 8px #9356DC;
     opacity: 0.85;
-    animation-delay: 2s;
+    animation-delay: 1s;
   }
 }
 @keyframes button_ext {
@@ -108,11 +107,11 @@ body {
     display: none;
   }
 }
-/* Styles pour le contenu principal */
+/* Styles for main content */
 .content {
   opacity: 0;
   visibility: hidden;
-  animation: fadeIn 2s forwards 3s; /* Le contenu apparait après 3s */
+  animation: fadeIn 2s forwards 3s; /* The content appears after 3s */
 }
 
 @keyframes fadeIn {

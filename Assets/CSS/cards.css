@@ -1,4 +1,4 @@
-@import "mixin-com.css";
+@charset "UTF-8";
 .restaurants {
   display: flex;
   flex-direction: column;
@@ -48,6 +48,9 @@
   height: 173px;
   width: 100%;
 }
+.restaurants__cards--link {
+  height: 173px;
+}
 .restaurants__cards-title {
   width: 100%;
   margin-bottom: 0px;
@@ -89,7 +92,6 @@
   width: 40px;
   height: 40px;
   position: absolute;
-  
   left: 20%;
   right: 30%;
   transform: translate(-50%, -50%);
@@ -102,16 +104,13 @@
   opacity: 0;
 }
 
-.restaurant__cards--link {
-  height: 170px;
-}
-
-/* encarts "nouveau" */
+/* “new” label */
 .new-badge {
+  display: block;
   position: relative;
   height: 18px;
   width: 55px;
-  top: -95%;
+  top: -90%;
   right: -70%;
   background-color: #99E2D0;
   color: #008766;

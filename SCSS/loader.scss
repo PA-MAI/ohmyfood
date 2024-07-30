@@ -1,4 +1,4 @@
-$anim-dur: 2s;
+$anim-dur: 1s;
 
         body {
             display: flex;
@@ -17,7 +17,7 @@ $anim-dur: 2s;
             top: 0;
             left: 0;
             z-index: 9999; 
-            animation: fadeOut 3s forwards 3s; /* Fade out après  3s */
+            animation: fadeOut 3s forwards 3s; /* Fade out after  3s */
         }
 
         .button__loader {
@@ -112,11 +112,11 @@ $anim-dur: 2s;
             }
         }
 
-        /* Styles pour le contenu principal */
+        /* Styles for main content */
         .content {
             opacity: 0;
             visibility: hidden;
-            animation: fadeIn 2s forwards 3s; /* Le contenu apparait après 3s */
+            animation: fadeIn 2s forwards 3s; /* The content appears after 3s */
         }
 
         @keyframes fadeIn {

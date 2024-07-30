@@ -1,7 +1,5 @@
-@charset "UTF-8";
-/*pages de menu*/
+/* General menu pages*/
 @import "header.css";
-@import "mixin-com.css";
 ::before,
 ::after {
   box-sizing: border-box;
@@ -162,7 +160,7 @@ body {
   margin-bottom: 55px;
   font-size: large;
   font-weight: 500;
-  box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.22);
+  box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.15);
   transition: all 2s ease-out;
   -webkit-transition: all 0.3s ease-out 0s;
   padding: 10px 45px 10px 45px;
@@ -170,13 +168,13 @@ body {
 .menu__button:hover {
   cursor: pointer;
   opacity: 0.7;
-  box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.25);
   transition: all 2s ease-in;
   -webkit-transition: all 0.3s ease-in 0s;
 }
 .menu__entrees, .menu__plats, .menu__desserts {
   opacity: 0;
-  animation: fade-in 0.6s ease forwards; /* Animation de 0.6s, easing et maintien à la fin */
+  animation: fade-in 0.6s ease forwards; /* Animation 0.6s, easing and hold at the end*/
   margin-bottom: 20px;
 }
 .menu__entrees--ul, .menu__plats--ul, .menu__desserts--ul {
@@ -281,7 +279,7 @@ body {
   opacity: 1;
 }
 
-/* apparition de la checkbox */
+/* appearance of the checkbox */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -292,7 +290,7 @@ body {
     z-index: 1;
   }
 }
-/* apparition des entrées */
+/* appearance of entries */
 @keyframes fade-in-entrees {
   0% {
     opacity: 0;
@@ -303,7 +301,7 @@ body {
     transform: translateY(0);
   }
 }
-/* apparition des plats */
+/* appearance of dishes */
 @keyframes fade-in-plats {
   0% {
     opacity: 0;
@@ -325,7 +323,7 @@ body {
     transform: translateY(0);
   }
 }
-/* Délais pour chaque section */
+/* Deadlines for each section */
 .menu__entrees {
   animation-name: fade-in-entrees;
   animation-delay: 0.5s;
@@ -341,14 +339,14 @@ d .menu__desserts {
   animation-delay: 1.5s;
 }
 
-/* bouton commander*/
+/* button "commander"*/
 .command {
   display: flex;
   justify-content: center;
   margin-top: 30px;
 }
 
-/*pied de page*/
+/*footer*/
 .footer {
   background-color: #353535;
   color: white;

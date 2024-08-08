@@ -334,7 +334,7 @@ body {
   animation-delay: 1s;
 }
 
-d .menu__desserts {
+.menu__desserts {
   animation-name: fade-in-desserts;
   animation-delay: 1.5s;
 }
